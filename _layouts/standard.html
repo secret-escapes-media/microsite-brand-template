@@ -27,6 +27,8 @@ layout: default
       <div class="shadow-f1 rounded overflow-hidden mx-auto max-w-screen-2xl">
         {% include nav/page.html %}
         <div class="bg-white text-textBlack">{{ content }}</div>
+        {% unless page.id == 'brand' or page.id == 'offers' %} {% include
+        promo.html %} {% endunless %}
       </div>
     </div>
   </main>
