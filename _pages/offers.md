@@ -4,7 +4,7 @@ id: offers
 title: Offers
 permalink: /offers/
 nav: true
-nav-order: 4
+nav-order: 5
 
 offers:
   - id: asdf

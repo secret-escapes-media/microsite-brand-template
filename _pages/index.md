@@ -4,102 +4,22 @@ id: overview
 title: Overview
 nav: true
 nav-order: 1
+header-title: UK Road Trip Escapes
 ---
 
 <div class="content-spacing">
   <div class="content-padding">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officia
-      repellat alias tenetur pariatur, labore fugit harum eius excepturi
-      placeat. Officia rerum sit pariatur alias repellendus dolorem delectus
-      enim ducimus?
-    </p>
-    <p>
-      Autem modi facere quod at fugit pariatur neque fuga ratione alias
-      perspiciatis nostrum earum error nisi, qui voluptatem ipsa? Cum soluta
-      iusto omnis dolorem, perferendis odit a est delectus excepturi.
-    </p>
-    <p>
-      Rerum minus labore nostrum commodi vero perferendis. A, atque reiciendis
-      velit ut doloremque explicabo dolore quam labore beatae facere incidunt
-      fugit voluptatum perspiciatis! Laborum voluptates alias, quo illum soluta
-      corrupti.
-    </p>
-
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officia
-      repellat alias tenetur pariatur, labore fugit harum eius excepturi
-      placeat. Officia rerum sit pariatur alias repellendus dolorem delectus
-      enim ducimus?
-    </p>
-    <p>
-      Autem modi facere quod at fugit pariatur neque fuga ratione alias
-      perspiciatis nostrum earum error nisi, qui voluptatem ipsa? Cum soluta
-      iusto omnis dolorem, perferendis odit a est delectus excepturi.
-    </p>
-    <p>
-      Rerum minus labore nostrum commodi vero perferendis. A, atque reiciendis
-      velit ut doloremque explicabo dolore quam labore beatae facere incidunt
-      fugit voluptatum perspiciatis! Laborum voluptates alias, quo illum soluta
-      corrupti.
-    </p>
-
+    <div class="mx-auto max-w-screen-lg text-center">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nesciunt recusandae at, maxime, maiores nulla aut distinctio, aliquid doloremque veniam pariatur eveniet rem atque consectetur in eaque illum dolor. Quasi?</p>
+    </div>
   </div>
-  <div class="content-padding content-border">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officia
-      repellat alias tenetur pariatur, labore fugit harum eius excepturi
-      placeat. Officia rerum sit pariatur alias repellendus dolorem delectus
-      enim ducimus?
-    </p>
-    <p>
-      Autem modi facere quod at fugit pariatur neque fuga ratione alias
-      perspiciatis nostrum earum error nisi, qui voluptatem ipsa? Cum soluta
-      iusto omnis dolorem, perferendis odit a est delectus excepturi.
-    </p>
-    <p>
-      Rerum minus labore nostrum commodi vero perferendis. A, atque reiciendis
-      velit ut doloremque explicabo dolore quam labore beatae facere incidunt
-      fugit voluptatum perspiciatis! Laborum voluptates alias, quo illum soluta
-      corrupti.
-    </p>
+  <div class="bg-black h-96 flex items-center justify-center text-white">
+    <div class="max-w-screen-sm text-center">
+      <h2 class="font-serif font-bold text-4xl leading-none">Explore the map</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit earum nesciunt recusandae at,</p>
+      <div class="h-4"></div>
+      <a href="#js-start-map" class="btn">Open The Map</a>
+    </div>
   </div>
-  <div class="content-padding content-border">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officia
-      repellat alias tenetur pariatur, labore fugit harum eius excepturi
-      placeat. Officia rerum sit pariatur alias repellendus dolorem delectus
-      enim ducimus?
-    </p>
-    <p>
-      Autem modi facere quod at fugit pariatur neque fuga ratione alias
-      perspiciatis nostrum earum error nisi, qui voluptatem ipsa? Cum soluta
-      iusto omnis dolorem, perferendis odit a est delectus excepturi.
-    </p>
-    <p>
-      Rerum minus labore nostrum commodi vero perferendis. A, atque reiciendis
-      velit ut doloremque explicabo dolore quam labore beatae facere incidunt
-      fugit voluptatum perspiciatis! Laborum voluptates alias, quo illum soluta
-      corrupti.
-    </p>
-
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officia
-      repellat alias tenetur pariatur, labore fugit harum eius excepturi
-      placeat. Officia rerum sit pariatur alias repellendus dolorem delectus
-      enim ducimus?
-    </p>
-    <p>
-      Autem modi facere quod at fugit pariatur neque fuga ratione alias
-      perspiciatis nostrum earum error nisi, qui voluptatem ipsa? Cum soluta
-      iusto omnis dolorem, perferendis odit a est delectus excepturi.
-    </p>
-    <p>
-      Rerum minus labore nostrum commodi vero perferendis. A, atque reiciendis
-      velit ut doloremque explicabo dolore quam labore beatae facere incidunt
-      fugit voluptatum perspiciatis! Laborum voluptates alias, quo illum soluta
-      corrupti.
-    </p>
-
-  </div>
+  {% include promo.html %}
 </div>

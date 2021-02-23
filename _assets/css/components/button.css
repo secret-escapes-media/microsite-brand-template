@@ -14,7 +14,7 @@
   }
   &&--partner {
     background: 0;
-    @apply bg-partner;
+    @apply bg-partner text-textBlack;
   }
 }
 
@@ -34,7 +34,7 @@
     }
   }
   &&--partner {
-    @apply text-partner;
+    @apply text-textBlack font-normal;
     &:before {
       @apply border-partner;
     }

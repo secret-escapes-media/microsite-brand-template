@@ -1,7 +1,7 @@
 <nav class="nav">
   {% assign nav-pages = site.html_pages | where: 'nav', 'true' | sort: 'nav-order' %}
   {% for nav-page in nav-pages %}
-  <div{% if page.id == nav-page.id %} class="is-current"{% endif %}>
+  <div{% if page.id == nav-page.id %} class="is-current"{% elsif nav-page.id == 'road-trips' and page.layout == 'trip' %} class="is-current"{% endif %}>
     <a href="{{site.baseurl}}{{nav-page.url}}">{{nav-page.title}}</a>
   </div>
   {% endfor %}

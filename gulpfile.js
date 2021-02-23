@@ -24,7 +24,7 @@ const cleanAssets = () => del(["./_site/_assets/**/*"]);
 
 // start browserSync local server - show under site subdirectory
 const browserSyncServe = () => {
-  const baseurl = "/template";
+  const baseurl = "/uk/2021/road-trip-escapes";
   browserSync.init({
     baseDir: "_site/",
     ui: false,

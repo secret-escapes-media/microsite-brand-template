@@ -26,6 +26,8 @@ layout: default
         <div class="bg-white text-textBlack">{{ content }}</div>
       </div>
     </div>
+    {% unless page.id == 'the-aa' or page.id == 'offers' %}{% include
+    offer-section.html %}{% endunless %}
   </main>
 </div>
 {% include nav/footer.html %}

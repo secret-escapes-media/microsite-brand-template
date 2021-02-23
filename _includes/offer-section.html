@@ -1,0 +1,21 @@
+{% assign offers = "#, #, #" | split: "," %}
+
+<div class="page-padding">
+  <div class="xl:pt-20">
+    <div class="mx-auto max-w-screen-3xl">
+      <h2 class="font-serif font-bold text-5xl leading-none text-center">
+        Road trip offers
+      </h2>
+      <div class="h-8"></div>
+      <div class="row row--4-4-4 row--gutter-sm">
+        {% for offer in offers %}
+        <div class="col">{% include offer/card.html offer="offer" %}</div>
+        {% endfor %}
+      </div>
+      <div class="h-10"></div>
+      <div class="text-center">
+        <a href="{{site.baseurl}}/offers" class="btn">View All Offers</a>
+      </div>
+    </div>
+  </div>
+</div>
