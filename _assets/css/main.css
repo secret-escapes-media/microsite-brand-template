@@ -2,3 +2,26 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@import "grid/grid.css";
+
+@import "nav/header.css";
+@import "nav/page.css";
+@import "nav/footer.css";
+
+@import "components/bg-img.css";
+@import "components/button.css";
+@import "components/icon.css";
+@import "components/offer-card.css";
+
+@import "content/content.css";
+@import "content/page.css";
+
+body {
+  /* font rendering options */
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}

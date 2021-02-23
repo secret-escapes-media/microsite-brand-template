@@ -1,0 +1,26 @@
+.page {
+  @apply relative bg-grey-50 pb-28;
+}
+
+.page-bg {
+  @apply absolute z-0 h-96 w-full bg-grey-700 bg-cover bg-center;
+  height: theme(screens.xl);
+  &:after {
+    content: "";
+    @apply absolute left-0 right-0 bottom-0 h-72;
+    background: linear-gradient(0deg, #f4f4f5 0%, rgba(#f4f4f5, 0) 100%);
+  }
+}
+
+.page-content {
+  @apply relative z-10;
+}
+
+.page-header {
+  @apply flex justify-center items-center;
+  height: theme(screens.sm);
+  &--lg {
+    height: theme(screens.lg);
+  }
+  @apply mx-auto max-w-screen-3xl;
+}

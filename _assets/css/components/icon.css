@@ -1,0 +1,9 @@
+.icon {
+  @apply inline-block cursor-pointer bg-center bg-no-repeat bg-contain h-6 w-6;
+  &--menu {
+    background-image: url("../img/icons/menu.svg");
+  }
+  &--close {
+    background-image: url("../img/icons/close.svg");
+  }
+}

@@ -1,0 +1,12 @@
+.header {
+  @apply bg-black text-white page-padding p-8;
+  .wrap {
+    @apply max-w-screen-3xl mx-auto flex items-center justify-between;
+  }
+  .main {
+    @apply mr-2;
+  }
+  .partner {
+    @apply flex-shrink-0;
+  }
+}

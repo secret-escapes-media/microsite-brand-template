@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="wrap">
+    <div class="main">
+      <div>{% include components/logo-se.html %}</div>
+      <div class="mt-4">
+        {% for item in site.data.core-nav.header %}
+        <a
+          class="text-grey-50 hover:text-primary-400 mr-4 whitespace-nowrap"
+          href="{{item.link}}"
+          >{{item.text}}</a
+        >
+        {% endfor %}
+        <a class="text-primary-400" href="{{site.baseurl}}">{{ site.title }}</a>
+      </div>
+    </div>
+    <div class="partner">{% include components/logo-partner.html %}</div>
+  </div>
+</header>

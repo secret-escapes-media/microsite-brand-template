@@ -1,0 +1,51 @@
+.footer {
+  @apply bg-black text-white page-padding py-8;
+  .wrap {
+    @apply max-w-screen-3xl mx-auto;
+  }
+  .title {
+    @apply flex items-center text-base font-bold mb-2;
+    > span {
+      @apply block flex-shrink-0;
+    }
+    &:after {
+      @apply block w-full ml-2 bg-grey-500;
+      content: "";
+      height: 1px;
+    }
+  }
+  .images {
+    word-spacing: 2rem;
+    > li {
+      @apply inline-block w-full my-2;
+    }
+  }
+  .links {
+    @apply text-sm;
+    h1 {
+      @apply font-bold;
+    }
+    ul {
+      word-spacing: 0.33rem;
+    }
+    li {
+      @apply inline-block text-grey-100;
+      word-spacing: normal;
+    }
+  }
+  hr {
+    @apply my-6 lg:my-4 border-grey-500;
+  }
+  .top-row {
+    @apply mb-10 lg:mb-12;
+  }
+  .end-row {
+    @apply mt-8 text-sm;
+  }
+  .social-icons {
+    @apply flex lg:justify-end;
+    li + li {
+      @apply ml-2;
+    }
+  }
+}

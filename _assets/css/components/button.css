@@ -1,0 +1,42 @@
+.btn {
+  @apply inline-block py-3 px-6 rounded text-white font-bold shadow-f1;
+  @apply bg-primary-400 bg-gradient-to-b from-primary-300 to-primary-400;
+  &&--sm {
+    @apply py-2 px-4;
+  }
+  &&--secondary {
+    @apply bg-secondary-400;
+    background: linear-gradient(
+      0deg,
+      #0c7f8c 0%,
+      theme(colors.secondary.500) 100%
+    );
+  }
+  &&--partner {
+    background: 0;
+    @apply bg-partner;
+  }
+}
+
+.btn-outline {
+  @apply relative inline-block py-3 px-6 rounded font-bold text-primary-300;
+  &:before {
+    content: "";
+    @apply absolute top-0 left-0 right-0 bottom-0 rounded border border-primary-400;
+  }
+  &&--sm {
+    @apply py-2 px-4;
+  }
+  &&--secondary {
+    @apply text-secondary-500;
+    &:before {
+      @apply border-secondary-500;
+    }
+  }
+  &&--partner {
+    @apply text-partner;
+    &:before {
+      @apply border-partner;
+    }
+  }
+}

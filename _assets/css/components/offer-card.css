@@ -1,0 +1,39 @@
+.offer-card {
+  @apply relative rounded overflow-hidden bg-white shadow-f2;
+  .link {
+    @apply absolute top-0 left-0 right-0 bottom-0;
+  }
+  .content {
+    @apply p-4;
+  }
+  .location {
+    @apply text-sm;
+  }
+  .title {
+    @apply font-serif font-bold text-xl leading-tight mb-4;
+  }
+  .bottom {
+    @apply flex justify-between mt-4;
+  }
+  .price {
+    @apply text-sm leading-tight;
+    span {
+      @apply text-2xl font-bold text-primary-400;
+    }
+  }
+  .saving {
+    @apply inline-block border border-primary-400 text-primary-400 rounded text-center text-sm leading-tight py-1 px-2 ml-2;
+    span {
+      @apply block text-xl font-bold;
+    }
+  }
+  .tags {
+    @apply -m-1;
+    .tag {
+      @apply inline-flex items-center bg-black text-white m-1 px-2 py-1 rounded-sm leading-tight uppercase font-bold text-sm tracking-wider;
+      img {
+        @apply mr-1;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.nav {
+  @apply flex h-14 text-textBlack;
+  > div {
+    @apply flex flex-grow items-stretch flex-col bg-white bg-opacity-75;
+    flex-basis: 0;
+    &.is-current {
+      @apply bg-white border-2 border-primary-400 border-t-0 border-l-0 border-r-0;
+    }
+    & > a {
+      @apply flex items-center justify-center flex-grow;
+    }
+  }
+}

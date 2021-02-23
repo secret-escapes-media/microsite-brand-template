@@ -1,0 +1,138 @@
+header:
+  - text: "Current Sales"
+    link: https://www.secretescapes.com/current-sales
+  - text: "Refundable Stays"
+    link: https://www.secretescapes.com/refundable/filter
+  - text: "Spa"
+    link: https://www.secretescapes.com/spa/filter
+  - text: "Magazine"
+    link: https://www.secretescapes.com/magazine-uk/
+  - text: "Gift Vouchers"
+    link: https://www.secretescapes.com/vouchers-offer
+  - text: "FAQ"
+    link: https://www.secretescapes.com/faq
+  - text: "Get Our App"
+    link: https://www.secretescapes.com/app
+
+footer:
+  featured:
+    - id: conde-nast-traveller
+      text: Condé Nast Traveller
+      width: 82
+    - id: evening-standard
+      text: Evening Standard
+      width: 87
+    - id: the-sunday-times
+      text: The Sunday Times
+      width: 140
+    - id: techcrunch
+      text: TechCrunch
+      width: 135
+  secret-escapes:
+    - text: About us
+      link: https://www.secretescapes.com/about-us
+    - text: Contact
+      link: https://www.secretescapes.com/contact
+    - text: Jobs
+      link: http://careers.secretescapes.com/
+    - text: FAQ
+      link: https://www.secretescapes.com/faq
+    - text: Terms and Conditions
+      link: https://www.secretescapes.com/terms-and-conditions
+    - text: Bespoke holidays
+      link: https://www.secretescapes.com/bespoke-travel
+    - text: Flight Finder
+      link: https://www.secretescapes.com/flightFinder
+    - text: Modern Slavery Statement
+      link: https://d1x3cbuht6sy0f.cloudfront.net/legal/slaveryStatement.pdf
+    - text: Collections
+      link: https://www.secretescapes.com/all-inclusive/filter
+    - text: "#smugface"
+      link: https://www.secretescapes.com/smugface
+    - text: How it works
+      link: https://www.secretescapes.com/how-it-works
+    - text: Add your Hotel
+      link: https://www.secretescapes.com/uk/addyourhotel
+    - text: Privacy policy
+      link: https://www.secretescapes.com/privacy-policy
+    - text: Gift Vouchers
+      link: https://www.secretescapes.com/vouchers-offer
+  collections:
+    - text: Spa breaks
+      link: https://www.secretescapes.com/spa/filter
+    - text: Boutique hotels
+      link: https://www.secretescapes.com/boutique/filter
+    - text: Beach holidays
+      link: https://www.secretescapes.com/beach/filter
+    - text: City breaks
+      link: https://www.secretescapes.com/city/filter
+    - text: Activity holidays
+      link: https://www.secretescapes.com/activities/filter
+    - text: Country breaks
+      link: https://www.secretescapes.com/country/filter
+    - text: Holidays in Europe
+      link: https://www.secretescapes.com/europe/filter
+    - text: Romantic breaks
+      link: https://www.secretescapes.com/romantic/filter
+    - text: Skiing holidays
+      link: https://www.secretescapes.com/ski/filter
+    - text: Family-friendly stays
+      link: https://www.secretescapes.com/family/filter
+    - text: Holidays with flights
+      link: https://www.secretescapes.com/flights/filter
+    - text: Summer holidays
+      link: https://www.secretescapes.com/summer-holidays/filter
+    - text: Weekend breaks
+      link: https://www.secretescapes.com/weekend-breaks/filter
+    - text: All-Inclusive Holidays
+      link: https://www.secretescapes.com/all-inclusive/filter
+    - text: Honeymoon packages &amp; hotels
+      link: https://www.secretescapes.com/honeymoon/filter
+    - text: Smart stays
+      link: https://www.secretescapes.com/smartstays/filter
+    - text: Northern Lights Holidays
+      link: https://www.secretescapes.com/northern-lights-iceland-lapland/filter
+    - text: UK countryside under £99
+      link: https://www.secretescapes.com/uk-country-under-99/filter
+    - text: Winter wonderland
+      link: https://www.secretescapes.com/winter-wonderland/filter
+    - text: London breaks
+      link: https://www.secretescapes.com/london-stays/filter
+    - text: Far-Flung Sun Escapes
+      link: https://www.secretescapes.com/far-flung-beach/filter
+    - text: New York City Breaks
+      link: https://www.secretescapes.com/nyc-new-york/filter
+    - text: UK Spa Breaks
+      link: https://www.secretescapes.com/uk-spa-breaks/filter
+    - text: Rome City Breaks
+      link: https://www.secretescapes.com/rome-breaks/filter
+    - text: Paris City Breaks
+      link: https://www.secretescapes.com/paris-breaks/filter
+    - text: Lake District Breaks
+      link: https://www.secretescapes.com/lake-district-breaks/filter
+    - text: Greece Holidays
+      link: https://www.secretescapes.com/greek-chic/filter
+    - text: Extraordinary escapes
+      link: https://www.secretescapes.com/extraordinaryescapes/filter
+    - text: Adults-only Holidays
+      link: https://www.secretescapes.com/adults-only-escapes-holidays/filter
+    - text: Autumn Escapes
+      link: https://www.secretescapes.com/autumn-escapes/filter
+    - text: Our finest Scotland stays
+      link: https://www.secretescapes.com/scotland-breaks-uk/filter
+    - text: Amsterdam Hotels
+      link: https://www.secretescapes.com/amsterdam-breaks/filter
+    - text: Refundable stays
+      link: https://www.secretescapes.com/refundable/filter
+    - text: Canary Islands Holidays
+      link: https://www.secretescapes.com/canary-islands/filter
+  social:
+    - id: facebook
+      text: Facebook
+      link: http://www.facebook.com/SecretEscapes
+    - id: instagram
+      text: Instagram
+      link: https://www.instagram.com/secretescapes/
+    - id: twitter
+      text: Twitter
+      link: http://www.twitter.com/secret_escapes

@@ -1,0 +1,32 @@
+.ratio {
+  @apply relative block bg-cover bg-center bg-no-repeat;
+  &:before {
+    content: "";
+    @apply block w-full;
+  }
+  &--2-3:before {
+    padding-top: 150%;
+  }
+  &--3-4:before {
+    padding-top: 133.333333%;
+  }
+  &--1-1:before {
+    padding-top: 100%;
+  }
+  &--4-3:before {
+    padding-top: 75%;
+  }
+  &--3-2:before {
+    padding-top: 66.666667%;
+  }
+  &--16-9:before {
+    padding-top: 56.25%;
+  }
+  &--21-9:before {
+    padding-top: 42.8571429%;
+  }
+  &--circle {
+    padding-top: 100%;
+    border-radius: 9999999em;
+  }
+}

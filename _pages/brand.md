@@ -1,9 +1,10 @@
 ---
 layout: standard
-id: overview
-title: Overview
+id: brand
+title: Brand
+permalink: /brand/
 nav: true
-nav-order: 1
+nav-order: 3
 ---
 
 <div class="content-spacing">
@@ -43,7 +44,6 @@ nav-order: 1
       fugit voluptatum perspiciatis! Laborum voluptates alias, quo illum soluta
       corrupti.
     </p>
-
   </div>
   <div class="content-padding content-border">
     <p>
@@ -100,6 +100,5 @@ nav-order: 1
       fugit voluptatum perspiciatis! Laborum voluptates alias, quo illum soluta
       corrupti.
     </p>
-
   </div>
 </div>
