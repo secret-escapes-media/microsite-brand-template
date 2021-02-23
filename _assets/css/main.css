@@ -8,7 +8,7 @@
 @import "nav/page.css";
 @import "nav/footer.css";
 
-@import "components/bg-img.css";
+@import "components/bg-ratio.css";
 @import "components/button.css";
 @import "components/icon.css";
 @import "components/offer-card.css";

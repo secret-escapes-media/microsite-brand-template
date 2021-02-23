@@ -1,4 +1,4 @@
-.ratio {
+.bg-ratio {
   @apply relative block bg-cover bg-center bg-no-repeat;
   &:before {
     content: "";

@@ -132,7 +132,13 @@ const compressCss = () =>
     .src("./_site/_assets/css/*.css")
     .pipe(
       purgecss({
-        content: ["./_site/**/*.html", "./_site/**/*.js"],
+        content: ["./_site/**/*.{html,js}"],
+        defaultExtractor: (content) => {
+          const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
+          const innerMatches =
+            content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || [];
+          return broadMatches.concat(innerMatches);
+        },
       })
     )
     .pipe(

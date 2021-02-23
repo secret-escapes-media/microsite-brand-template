@@ -35,16 +35,23 @@
 
   &--gutter-sm {
     @apply -mt-4 -ml-4 lg:-mt-6 lg:-ml-6;
-  }
-  &--gutter-sm > .col {
-    @apply pt-4 pl-4 lg:pt-6 lg:pl-6;
+    > .col {
+      @apply pt-4 pl-4 lg:pt-6 lg:pl-6;
+    }
   }
 
   &--gutter-lg {
     @apply -mt-8 -ml-8 lg:-mt-10 lg:-ml-10;
+    > .col {
+      @apply pt-8 pl-8 lg:pt-10 lg:pl-10;
+    }
   }
-  &--gutter-lg > .col {
-    @apply pt-8 pl-8 lg:pt-10 lg:pl-10;
+
+  &--gutter-0 {
+    @apply mt-0 ml-0;
+    > .col {
+      @apply pt-0 pl-0;
+    }
   }
 
   @screen lg {
