@@ -12,14 +12,6 @@ header-content: >
 
 <div class="content-spacing">
   <div class="content-padding">
-    <div class="mx-auto max-w-screen-md font-bold font-serif text-3xl py-12 text-center">
-      <h1 class="mt-6 leading-none">This is the title that is long so it wraps onto the next line</h1>
-      <h1 class="mt-6 leading-tight">This is the title that is long so it wraps onto the next line</h1>
-      <h1 class="mt-6 leading-snug">This is the title that is long so it wraps onto the next line</h1>
-      <h1 class="mt-6 leading-normal">This is the title that is long so it wraps onto the next line</h1>
-      <h1 class="mt-6 leading-relaxed">This is the title that is long so it wraps onto the next line</h1>
-      <h1 class="mt-6 leading-loose">This is the title that is long so it wraps onto the next line</h1>
-    </div>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officia
       repellat alias tenetur pariatur, labore fugit harum eius excepturi
