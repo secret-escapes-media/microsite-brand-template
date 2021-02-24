@@ -15,6 +15,7 @@
 
 @import "content/content.css";
 @import "content/page.css";
+@import "content/bob.css";
 
 body {
   /* font rendering options */

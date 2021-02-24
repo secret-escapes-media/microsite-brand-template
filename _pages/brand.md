@@ -9,96 +9,43 @@ nav-order: 3
 
 <div class="content-spacing">
   <div class="content-padding">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officia
-      repellat alias tenetur pariatur, labore fugit harum eius excepturi
-      placeat. Officia rerum sit pariatur alias repellendus dolorem delectus
-      enim ducimus?
-    </p>
-    <p>
-      Autem modi facere quod at fugit pariatur neque fuga ratione alias
-      perspiciatis nostrum earum error nisi, qui voluptatem ipsa? Cum soluta
-      iusto omnis dolorem, perferendis odit a est delectus excepturi.
-    </p>
-    <p>
-      Rerum minus labore nostrum commodi vero perferendis. A, atque reiciendis
-      velit ut doloremque explicabo dolore quam labore beatae facere incidunt
-      fugit voluptatum perspiciatis! Laborum voluptates alias, quo illum soluta
-      corrupti.
-    </p>
-
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officia
-      repellat alias tenetur pariatur, labore fugit harum eius excepturi
-      placeat. Officia rerum sit pariatur alias repellendus dolorem delectus
-      enim ducimus?
-    </p>
-    <p>
-      Autem modi facere quod at fugit pariatur neque fuga ratione alias
-      perspiciatis nostrum earum error nisi, qui voluptatem ipsa? Cum soluta
-      iusto omnis dolorem, perferendis odit a est delectus excepturi.
-    </p>
-    <p>
-      Rerum minus labore nostrum commodi vero perferendis. A, atque reiciendis
-      velit ut doloremque explicabo dolore quam labore beatae facere incidunt
-      fugit voluptatum perspiciatis! Laborum voluptates alias, quo illum soluta
-      corrupti.
-    </p>
+    <div class="mx-auto max-w-screen-lg text-center">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et quis iusto dolor magnam impedit sit officiis possimus quibusdam quaerat commodi, odio neque. Ducimus optio voluptates accusamus et aspernatur animi voluptatem maxime obcaecati, magni perspiciatis enim possimus, culpa assumenda provident at.</p>
+    </div>
   </div>
   <div class="content-padding content-border">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officia
-      repellat alias tenetur pariatur, labore fugit harum eius excepturi
-      placeat. Officia rerum sit pariatur alias repellendus dolorem delectus
-      enim ducimus?
-    </p>
-    <p>
-      Autem modi facere quod at fugit pariatur neque fuga ratione alias
-      perspiciatis nostrum earum error nisi, qui voluptatem ipsa? Cum soluta
-      iusto omnis dolorem, perferendis odit a est delectus excepturi.
-    </p>
-    <p>
-      Rerum minus labore nostrum commodi vero perferendis. A, atque reiciendis
-      velit ut doloremque explicabo dolore quam labore beatae facere incidunt
-      fugit voluptatum perspiciatis! Laborum voluptates alias, quo illum soluta
-      corrupti.
-    </p>
-  </div>
-  <div class="content-padding content-border">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officia
-      repellat alias tenetur pariatur, labore fugit harum eius excepturi
-      placeat. Officia rerum sit pariatur alias repellendus dolorem delectus
-      enim ducimus?
-    </p>
-    <p>
-      Autem modi facere quod at fugit pariatur neque fuga ratione alias
-      perspiciatis nostrum earum error nisi, qui voluptatem ipsa? Cum soluta
-      iusto omnis dolorem, perferendis odit a est delectus excepturi.
-    </p>
-    <p>
-      Rerum minus labore nostrum commodi vero perferendis. A, atque reiciendis
-      velit ut doloremque explicabo dolore quam labore beatae facere incidunt
-      fugit voluptatum perspiciatis! Laborum voluptates alias, quo illum soluta
-      corrupti.
-    </p>
-
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officia
-      repellat alias tenetur pariatur, labore fugit harum eius excepturi
-      placeat. Officia rerum sit pariatur alias repellendus dolorem delectus
-      enim ducimus?
-    </p>
-    <p>
-      Autem modi facere quod at fugit pariatur neque fuga ratione alias
-      perspiciatis nostrum earum error nisi, qui voluptatem ipsa? Cum soluta
-      iusto omnis dolorem, perferendis odit a est delectus excepturi.
-    </p>
-    <p>
-      Rerum minus labore nostrum commodi vero perferendis. A, atque reiciendis
-      velit ut doloremque explicabo dolore quam labore beatae facere incidunt
-      fugit voluptatum perspiciatis! Laborum voluptates alias, quo illum soluta
-      corrupti.
-    </p>
+    <div class="bob">
+      <div class="img">
+        <div class="bg-ratio bg-ratio--3-2 bg-grey-700 bg-no-repeat bg-cover bg-center rounded lg:rounded-lg" style="background-image: url('{{site.img}}/img.jpg')"></div>
+      </div>
+      <div class="text">
+        <h2 class="font-serif font-bold text-3xl leading-snug">Lorem ipsum dolor sit</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate vel, tempora repellendus animi alias nulla debitis magni vitae facere numquam odit aliquid atque at, officiis rerum itaque nam ipsam ipsum.</p>
+        <div class="h-4"></div>
+        <a href="#link" class="btn btn--sm btn--partner">Find Out More</a>
+      </div>
+    </div>
+    <div class="bob bob--swap">
+      <div class="img">
+        <div class="bg-ratio bg-ratio--3-2 bg-grey-700 bg-no-repeat bg-cover bg-center rounded lg:rounded-lg" style="background-image: url('{{site.img}}/img.jpg')"></div>
+      </div>
+      <div class="text">
+        <h2 class="font-serif font-bold text-3xl leading-snug">Lorem ipsum dolor sit</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate vel, tempora repellendus animi alias nulla debitis magni vitae facere numquam odit aliquid atque at, officiis rerum itaque nam ipsam ipsum.</p>
+        <div class="h-4"></div>
+        <a href="#link" class="btn btn--sm btn--partner">Find Out More</a>
+      </div>
+    </div>
+    <div class="bob">
+      <div class="img">
+        <div class="bg-ratio bg-ratio--3-2 bg-grey-700 bg-no-repeat bg-cover bg-center rounded lg:rounded-lg" style="background-image: url('{{site.img}}/img.jpg')"></div>
+      </div>
+      <div class="text">
+        <h2 class="font-serif font-bold text-3xl leading-snug">Lorem ipsum dolor sit</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate vel, tempora repellendus animi alias nulla debitis magni vitae facere numquam odit aliquid atque at, officiis rerum itaque nam ipsam ipsum.</p>
+        <div class="h-4"></div>
+        <a href="#link" class="btn btn--sm btn--partner">Find Out More</a>
+      </div>
+    </div>
   </div>
 </div>
