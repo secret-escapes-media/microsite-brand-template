@@ -20,6 +20,7 @@
     "postcss-easy-import": "^3.0.0",
     "postcss-nested-vars": "^1.0.0",
     "postcss-rgb": "^1.0.0",
+    "postcss-sassy-mixins": "^2.1.0",
     "postcss-simple-vars": "^6.0.3",
     "tailwindcss": "^2.0.3"
   },

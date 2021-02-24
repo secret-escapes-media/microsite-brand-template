@@ -8,13 +8,15 @@
 @import "nav/page.css";
 @import "nav/footer.css";
 
-@import "components/bg-img.css";
-@import "components/button.css";
-@import "components/icon.css";
-@import "components/offer-card.css";
+@import "component/bg-ratio.css";
+@import "component/button.css";
+@import "component/icon.css";
+@import "component/offer-card.css";
 
 @import "content/content.css";
 @import "content/page.css";
+@import "content/bob.css";
+@import "content/titles.css";
 
 body {
   /* font rendering options */

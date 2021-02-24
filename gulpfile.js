@@ -6,8 +6,10 @@ const browserSync = require("browser-sync");
 const postcss = require("gulp-postcss");
 const postcssNesting = require("postcss-nested");
 const postcssImports = require("postcss-easy-import");
-const postcssVars = require("postcss-nested-vars");
+const postcssVars = require("postcss-simple-vars");
+const postcssNestedVars = require("postcss-nested-vars");
 const postcssRgb = require("postcss-rgb");
+const postcssMixins = require("postcss-sassy-mixins");
 const tailwind = require("tailwindcss");
 const autoprefixer = require("autoprefixer");
 const purgecss = require("gulp-purgecss");
@@ -56,7 +58,9 @@ const buildCss = () =>
     .pipe(
       postcss([
         postcssImports,
+        postcssMixins,
         postcssVars,
+        postcssNestedVars,
         postcssRgb,
         postcssNesting,
         tailwind,
@@ -132,7 +136,13 @@ const compressCss = () =>
     .src("./_site/_assets/css/*.css")
     .pipe(
       purgecss({
-        content: ["./_site/**/*.html", "./_site/**/*.js"],
+        content: ["./_site/**/*.{html,js}"],
+        defaultExtractor: (content) => {
+          const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
+          const innerMatches =
+            content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || [];
+          return broadMatches.concat(innerMatches);
+        },
       })
     )
     .pipe(

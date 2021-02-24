@@ -4,7 +4,10 @@ id: overview
 title: Overview
 nav: true
 nav-order: 1
-header-title: UK Road Trip Escapes
+header-content: >
+  <h1 class="font-display text-white font-semibold leading-none" style="font-size: 5rem;">
+    {{site.title}}
+  </h1>
 ---
 
 <div class="content-spacing">

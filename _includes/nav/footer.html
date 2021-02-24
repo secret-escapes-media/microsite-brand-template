@@ -12,7 +12,7 @@
                 alt="{{item.text }} logo"
               />
             </li>
-            {% endfor %}
+            {% unless forloop.last %}&#32;{% endunless %} {% endfor %}
           </ul>
         </div>
         <div class="col col--3">
@@ -37,7 +37,7 @@
       <ul class="col col--10">
         {% for item in site.data.core-nav.footer.secret-escapes %}
         <li><a href="{{item.link}}">{{item.text}}</a></li>
-        {% endfor %}
+        {% unless forloop.last %}&#32;{% endunless %} {% endfor %}
       </ul>
     </div>
     <hr />
@@ -48,7 +48,7 @@
       <ul class="col col--10">
         {% for item in site.data.core-nav.footer.collections %}
         <li><a href="{{item.link}}">{{item.text}}</a></li>
-        {% endfor %}
+        {% unless forloop.last %}&#32;{% endunless %} {% endfor %}
       </ul>
     </div>
     <div class="end-row">

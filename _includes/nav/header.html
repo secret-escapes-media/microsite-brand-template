@@ -1,7 +1,7 @@
 <header class="header">
   <div class="wrap">
     <div class="main">
-      <div>{% include components/logo-se.html %}</div>
+      <div>{% include component/logo-se.html %}</div>
       <div class="mt-4">
         {% for item in site.data.core-nav.header %}
         <a
@@ -10,9 +10,11 @@
           >{{item.text}}</a
         >
         {% endfor %}
-        <a class="text-primary-400" href="{{site.baseurl}}">{{ site.title }}</a>
+        <a class="text-primary-400 whitespace-nowrap" href="{{site.baseurl}}"
+          >{{ site.title }}</a
+        >
       </div>
     </div>
-    <div class="partner">{% include components/logo-partner.html %}</div>
+    <div class="partner">{% include component/logo-partner.html %}</div>
   </div>
 </header>

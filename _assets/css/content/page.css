@@ -17,10 +17,9 @@
 }
 
 .page-header {
-  @apply flex justify-center items-center;
+  @apply flex justify-center items-center text-center mx-auto max-w-screen-3xl;
   height: theme(screens.sm);
   &--lg {
     height: theme(screens.lg);
   }
-  @apply mx-auto max-w-screen-3xl;
 }
