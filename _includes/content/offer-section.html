@@ -9,7 +9,9 @@
       <div class="h-8"></div>
       <div class="row row--4-4-4 row--gutter-sm">
         {% for offer in offers %}
-        <div class="col">{% include offer/card.html offer="offer" %}</div>
+        <div class="col">
+          {% include component/offer-card.html offer="offer" %}
+        </div>
         {% endfor %}
       </div>
       <div class="h-10"></div>

@@ -27,12 +27,12 @@ layout: default
       <div class="shadow-f1 rounded overflow-hidden mx-auto max-w-screen-2xl">
         {% include nav/page.html %}
         <div class="bg-white text-textBlack">{{ content }}</div>
-        {% unless page.id == 'brand' or page.id == 'offers' %} {% include
+        {% unless page.id == 'the-aa' or page.id == 'offers' %} {% include
         content/promo.html %} {% endunless %}
       </div>
     </div>
     {% unless page.id == 'the-aa' or page.id == 'offers' %}{% include
-    offer-section.html %}{% endunless %}
+    content/offer-section.html %}{% endunless %}
   </main>
 </div>
 {% include nav/footer.html %}

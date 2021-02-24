@@ -16,7 +16,7 @@ nav-order: 2
   {% assign trip-pages = site.html_pages | where: 'layout', 'trip' | sort: 'trip-order' %}
   {% for trip in trip-pages %}
     <div class="col">
-      {% include road-trip.html data="trip" %}
+      {% include content/road-trip.html data="trip" %}
     </div>
   {% endfor %}
   </div>

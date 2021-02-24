@@ -24,5 +24,4 @@ header-content: >
       <a href="#js-start-map" class="btn">Open The Map</a>
     </div>
   </div>
-  {% include promo.html %}
 </div>

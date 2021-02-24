@@ -131,7 +131,7 @@ layout: standard
   <div class="row row--3-3-3-3 row--gutter-sm">
     {% assign trip-pages = site.html_pages | where: 'layout', 'trip' | sort:
     'trip-order' %} {% for trip in trip-pages %} {% unless page.id == trip.id %}
-    <div class="col">{% include road-trip.html data="trip" %}</div>
+    <div class="col">{% include content/road-trip.html data="trip" %}</div>
     {% endunless %} {% endfor %}
   </div>
 </div>
