@@ -23,7 +23,7 @@ offers:
       <div class="row row--6-6 row--gutter-sm">
         {% for offer in page.offers %}
           <div class="col">
-            {% include offer/card.html offer="offer" %}
+            {% include component/offer-card.html data="offer" %}
           </div>
         {% endfor %}
       </div>
