@@ -13,20 +13,51 @@
     flex-basis: 100%;
   }
 
-  @screen lg {
-    &--6-6 > .col {
+  /********************************************************************* rows */
+
+  /* equal row column widths & breakpoints */
+  @mixin row-column-widths() {
+    &6-6 > .col {
       @apply max-w-1/2;
       flex-basis: 50%;
     }
-    &--4-4-4 > .col {
+    &4-4-4 > .col {
       @apply max-w-1/3;
       flex-basis: 33.33%;
     }
-    &--3-3-3-3 > .col {
+    &3-3-3-3 > .col {
       @apply max-w-1/4;
       flex-basis: 25%;
     }
   }
+
+  /* default breakpoint for all columns - saves in always writing breakpoint in classes */
+  @screen lg {
+    &-- {
+      @include row-column-widths;
+    }
+  }
+
+  /* constant columns (no breakpoint) */
+  &--constant- {
+    @include row-column-widths;
+  }
+
+  /* columns starting at other breakpoints */
+  @mixin row-columns-breakpoint($size) {
+    @screen $size {
+      &--$(size)- {
+        @include row-column-widths;
+      }
+    }
+  }
+  @include row-columns-breakpoint(sm);
+  @include row-columns-breakpoint(md);
+  @include row-columns-breakpoint(xl);
+  @include row-columns-breakpoint(2xl);
+  @include row-columns-breakpoint(3xl);
+
+  /*******************************************************************gutters */
 
   @apply -mt-6 -ml-6 lg:-mt-8 lg:-ml-8;
   > .col {
@@ -54,56 +85,80 @@
     }
   }
 
-  @screen lg {
-    .col {
-      &--1 {
-        @apply max-w-1/12;
-        flex-basis: 8.333333%;
-      }
-      &--2 {
-        @apply max-w-2/12;
-        flex-basis: 16.666667%;
-      }
-      &--3 {
-        @apply max-w-3/12;
-        flex-basis: 25%;
-      }
-      &--4 {
-        @apply max-w-4/12;
-        flex-basis: 33.33%;
-      }
-      &--5 {
-        @apply max-w-5/12;
-        flex-basis: 41.666667%;
-      }
-      &--6 {
-        @apply max-w-6/12;
-        flex-basis: 50%;
-      }
-      &--7 {
-        @apply max-w-7/12;
-        flex-basis: 58.333333%;
-      }
-      &--8 {
-        @apply max-w-8/12;
-        flex-basis: 66.666667%;
-      }
-      &--9 {
-        @apply max-w-9/12;
-        flex-basis: 75%;
-      }
-      &--10 {
-        @apply max-w-10/12;
-        flex-basis: 83.333333%;
-      }
-      &--11 {
-        @apply max-w-11/12;
-        flex-basis: 91.666667%;
-      }
-      &--12 {
-        @apply max-w-full;
-        flex-basis: 100%;
+  /****************************************************************** columns */
+
+  @mixin column-widths() {
+    &1 {
+      @apply max-w-1/12;
+      flex-basis: 8.333333%;
+    }
+    &2 {
+      @apply max-w-2/12;
+      flex-basis: 16.666667%;
+    }
+    &3 {
+      @apply max-w-3/12;
+      flex-basis: 25%;
+    }
+    &4 {
+      @apply max-w-4/12;
+      flex-basis: 33.33%;
+    }
+    &5 {
+      @apply max-w-5/12;
+      flex-basis: 41.666667%;
+    }
+    &6 {
+      @apply max-w-6/12;
+      flex-basis: 50%;
+    }
+    &7 {
+      @apply max-w-7/12;
+      flex-basis: 58.333333%;
+    }
+    &8 {
+      @apply max-w-8/12;
+      flex-basis: 66.666667%;
+    }
+    &9 {
+      @apply max-w-9/12;
+      flex-basis: 75%;
+    }
+    &10 {
+      @apply max-w-10/12;
+      flex-basis: 83.333333%;
+    }
+    &11 {
+      @apply max-w-11/12;
+      flex-basis: 91.666667%;
+    }
+    &12 {
+      @apply max-w-full;
+      flex-basis: 100%;
+    }
+  }
+
+  /* columns starting at other breakpoints */
+  @mixin columns-breakpoint($size) {
+    @screen $size {
+      &--$(size)- {
+        @include column-widths;
       }
     }
+  }
+
+  .col {
+    /* default breakpoint for individual columns - saves in always writing breakpoint in classes */
+    @screen lg {
+      &-- {
+        @include column-widths;
+      }
+    }
+    /* columns starting at other breakpoints */
+    @include columns-breakpoint(sm);
+    @include columns-breakpoint(md);
+    @include columns-breakpoint(xl);
+    @include columns-breakpoint(2xl);
+    @include columns-breakpoint(3xl);
   }
 }
