@@ -1,17 +1,17 @@
 <!-- #####################################################  jekyll variables -->
 
 <!-- page meta data -->
-{% if page.intro %} {% assign meta-description = page.intro | strip_html |
-strip_newlines | truncate: 155 %} {% else %} {% assign meta-description =
-site.description | truncate: 155 %} {% endif %}
+{% if page.intro %}
+    {% assign meta-description = page.intro | strip_html | strip_newlines | truncate: 155 %}
+  {% else %}
+    {% assign meta-description = site.description | truncate: 155 %}
+{% endif %}
 
 <!-- page meta title -->
-{% assign meta-title = page.title | append: ' | ' | append: site.title | remove:
-'&shy;' | replace: '&nbsp;', ' ' %}
+{% assign meta-title = page.title | append: ' | ' | append: site.title | remove: '&shy;' | replace: '&nbsp;', ' ' %}
 
 <!-- social image -->
-{% assign social-image-url = site.url | append: site.img | append:
-'/thumbnail/social.jpg' %}
+{% assign social-image-url = site.url | append: site.img | append: '/thumbnail/social.jpg' %}
 
 <!-- ####################################################################### -->
 

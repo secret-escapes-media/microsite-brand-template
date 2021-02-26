@@ -5,7 +5,7 @@ module.exports = {
     fontFamily: {
       sans: ["Source Sans Pro", ...defaultTheme.fontFamily.sans],
       serif: ["Source Serif Pro", ...defaultTheme.fontFamily.sans],
-      display: ["Raleway", ...defaultTheme.fontFamily.sans],
+      display: ["Raleway", ...defaultTheme.fontFamily.sans]
     },
     colors: {
       transparent: "transparent",
@@ -21,7 +21,7 @@ module.exports = {
         300: "#ff8b33", // gradient start
         400: "#f56a00", // gradient end
         500: "#c25400",
-        600: "#8f3e00",
+        600: "#8f3e00"
       },
       secondary: {
         50: "#ebfdff",
@@ -30,7 +30,7 @@ module.exports = {
         300: "#33ebff",
         400: "#00dcf5",
         500: "#00aec2", // gradient start
-        600: "#00818f", // gradient end: #0c7f8c
+        600: "#00818f" // gradient end: #0c7f8c
       },
       smart: {
         50: "#ebf8ff",
@@ -39,7 +39,7 @@ module.exports = {
         300: "#33bbff",
         400: "#00a3f5",
         500: "#0081c2",
-        600: "#005f8f",
+        600: "#005f8f"
       },
       green: {
         50: "#ecfef7",
@@ -48,7 +48,7 @@ module.exports = {
         300: "#3df5ab",
         400: "#0ce990",
         500: "#05bd73",
-        600: "#008f55",
+        600: "#008f55"
       },
       yellow: {
         50: "#fff9ea",
@@ -57,7 +57,7 @@ module.exports = {
         300: "#ffc533",
         400: "#f5af00",
         500: "#c28b00",
-        600: "#8f6600",
+        600: "#8f6600"
       },
       red: {
         50: "#feecec",
@@ -66,7 +66,7 @@ module.exports = {
         300: "#f53d3d",
         400: "#e90c0c",
         500: "#bd0505",
-        600: "#8f0000",
+        600: "#8f0000"
       },
       blue: {
         50: "#eaf4ff",
@@ -75,7 +75,7 @@ module.exports = {
         300: "#3392ff",
         400: "#0072f5",
         500: "#005ac2",
-        600: "#00438f",
+        600: "#00438f"
       },
       grey: {
         50: "#f4f4f5",
@@ -85,8 +85,8 @@ module.exports = {
         400: "#747681",
         500: "#575a6b",
         600: "#3d4052",
-        700: "#1E1F26",
-      },
+        700: "#1E1F26"
+      }
     },
     screens: {
       sm: "360px",
@@ -94,7 +94,7 @@ module.exports = {
       lg: "600px",
       xl: "840px",
       "2xl": "1080px",
-      "3xl": "1200px",
+      "3xl": "1200px"
     },
     fontSize: {
       xs: "0.5rem",
@@ -106,7 +106,7 @@ module.exports = {
       "3xl": "2rem",
       "4xl": "2.5rem",
       "5xl": "3rem",
-      "6xl": "3.5rem",
+      "6xl": "3.5rem"
     },
     boxShadow: {
       b: "inset 1px 1px 1px rgba(0, 0, 0, 0.25)",
@@ -115,7 +115,7 @@ module.exports = {
       f3: "0px 4px 8px rgba(0, 0, 0, 0.25)",
       f4: "0px 8px 16px rgba(0, 0, 0, 0.25)",
       outline: "0 0 0 3px rgba(0, 114, 240, 0.5)",
-      none: "none",
+      none: "none"
     },
     extend: {
       maxWidth: {
@@ -144,7 +144,7 @@ module.exports = {
         "8/12": "66.666667%",
         "9/12": "75%",
         "10/12": "83.333333%",
-        "11/12": "91.666667%",
+        "11/12": "91.666667%"
       },
       lineHeight: {
         none: "1",
@@ -152,9 +152,9 @@ module.exports = {
         snug: "1.15",
         normal: "1.25",
         relaxed: "1.33",
-        loose: "1.5",
-      },
-    },
+        loose: "1.5"
+      }
+    }
   },
-  darkMode: false,
+  darkMode: false
 };

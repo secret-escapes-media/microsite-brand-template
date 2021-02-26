@@ -6,13 +6,20 @@ partner:
   link: "#client-name"
 
 # file paths
-url:     "https://mp.secretescapes.com" # the base hostname & protocol for your site
+url: "https://mp.secretescapes.com" # the base hostname & protocol for your site
 baseurl: "/template" # the subpath of your site, e.g. /blog/
-img:     "/template/_assets/img"
-css:     "/template/_assets/css"
-js:      "/template/_assets/js"
+img: "/template/_assets/img"
+css: "/template/_assets/css"
+js: "/template/_assets/js"
 
-exclude: [node_modules, package.json, package-lock.json, gulpfile.js, tailwind.config.js]
+exclude:
+  [
+    node_modules,
+    package.json,
+    package-lock.json,
+    gulpfile.js,
+    tailwind.config.js
+  ]
 keep_files: [_assets]
 plugins:
   - jekyll-pages-directory

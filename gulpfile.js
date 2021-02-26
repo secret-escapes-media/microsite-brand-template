@@ -33,9 +33,9 @@ const browserSyncServe = () => {
     startPath: baseurl,
     server: {
       routes: {
-        [baseurl]: "_site/",
-      },
-    },
+        [baseurl]: "_site/"
+      }
+    }
   });
 };
 
@@ -63,7 +63,7 @@ const buildCss = () =>
         postcssNestedVars,
         postcssRgb,
         postcssNesting,
-        tailwind,
+        tailwind
       ])
     )
     .pipe(gulp.dest("./_site/_assets/css/"))
@@ -84,7 +84,7 @@ const buildJsMain = () =>
       //  JS MAIN FILE BUILD
       // --------------------
       "./node_modules/jquery/dist/jquery.min.js",
-      "./_assets/js/main.js",
+      "./_assets/js/main.js"
     ])
     .pipe(concat("main.js"))
     .pipe(gulp.dest("./_site/_assets/js/"))
@@ -142,15 +142,15 @@ const compressCss = () =>
           const innerMatches =
             content.match(/[^<>"'`\s.()]*[^<>"'`\s.():]/g) || [];
           return broadMatches.concat(innerMatches);
-        },
+        }
       })
     )
     .pipe(
       postcss([
         autoprefixer({
-          cascade: false,
+          cascade: false
         }),
-        cssnano(),
+        cssnano()
       ])
     )
     .pipe(gulp.dest("./_site/_assets/css"));
@@ -160,7 +160,7 @@ const compressImages = () =>
     .src("./_site/_assets/img/**/*")
     .pipe(
       image({
-        svgo: ["--disable", "removeViewBox"],
+        svgo: ["--disable", "removeViewBox"]
       })
     )
     .pipe(gulp.dest("./_site/_assets/img"));
@@ -177,7 +177,7 @@ const compressHtml = () =>
     .pipe(
       htmlmin({
         collapseWhitespace: true,
-        removeComments: true,
+        removeComments: true
       })
     )
     .pipe(gulp.dest("./_site"));
