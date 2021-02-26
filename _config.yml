@@ -6,13 +6,20 @@ partner:
   link: https://www.theaa.com/
 
 # file paths
-url:     "https://mp.secretescapes.com" # the base hostname & protocol for your site
+url: "https://mp.secretescapes.com" # the base hostname & protocol for your site
 baseurl: "/uk/2021/road-trip-escapes" # the subpath of your site, e.g. /blog/
-img:     "/uk/2021/road-trip-escapes/_assets/img"
-css:     "/uk/2021/road-trip-escapes/_assets/css"
-js:      "/uk/2021/road-trip-escapes/_assets/js"
+img: "/uk/2021/road-trip-escapes/_assets/img"
+css: "/uk/2021/road-trip-escapes/_assets/css"
+js: "/uk/2021/road-trip-escapes/_assets/js"
 
-exclude: [node_modules, package.json, package-lock.json, gulpfile.js, tailwind.config.js]
+exclude:
+  [
+    node_modules,
+    package.json,
+    package-lock.json,
+    gulpfile.js,
+    tailwind.config.js
+  ]
 keep_files: [_assets]
 plugins:
   - jekyll-pages-directory

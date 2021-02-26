@@ -1,1 +1,1 @@
-console.log('this is main js file')
+// custom js for this project

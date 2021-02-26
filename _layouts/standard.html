@@ -12,13 +12,15 @@ layout: default
     <!-- page header -->
     <div class="page-padding">
       <header
-        class="page-header{% if page.id == 'overview' %} page-header--lg{% endif %}"
+        class="page-header{% if page.id == 'overview' %} page-header--lg
+          {% endif %}"
       >
-        {% if page.header-content %} {{page.header-content | liquify}} {% else
-        %}
-        <h1 class="font-display text-white text-6xl font-semibold">
-          {{page.title}}
-        </h1>
+        {% if page.header-content %}
+          {{page.header-content | liquify}}
+        {% else %}
+          <h1 class="font-display text-white text-6xl font-semibold">
+            {{page.title}}
+          </h1>
         {% endif %}
       </header>
     </div>
@@ -27,12 +29,14 @@ layout: default
       <div class="shadow-f1 rounded overflow-hidden mx-auto max-w-screen-2xl">
         {% include nav/page.html %}
         <div class="bg-white text-textBlack">{{ content }}</div>
-        {% unless page.id == 'the-aa' or page.id == 'offers' %} {% include
-        content/promo.html %} {% endunless %}
+        {% unless page.id == 'the-aa' or page.id == 'offers' %}
+          {% include content/promo.html %}
+        {% endunless %}
       </div>
     </div>
-    {% unless page.id == 'the-aa' or page.id == 'offers' %}{% include
-    content/offer-section.html %}{% endunless %}
+    {% unless page.id == 'the-aa' or page.id == 'offers' %}
+      {% include content/offer-section.html %}
+    {% endunless %}
   </main>
 </div>
 {% include nav/footer.html %}

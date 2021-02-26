@@ -6,13 +6,14 @@
           <h1 class="title"><span>As featured in</span></h1>
           <ul class="images">
             {% for item in site.data.core-nav.footer.featured %}
-            <li style="max-width: {{item.width}}px;">
-              <img
-                src="{{site.img}}/logo/{{item.id}}.svg"
-                alt="{{item.text }} logo"
-              />
-            </li>
-            {% unless forloop.last %}&#32;{% endunless %} {% endfor %}
+              <li style="max-width: {{item.width}}px;">
+                <img
+                  src="{{site.img}}/logo/{{item.id}}.svg"
+                  alt="{{item.text }} logo"
+                />
+              </li>
+              {% unless forloop.last %}&#32;{% endunless %} <!-- keeps normal space on html minify -->
+            {% endfor %}
           </ul>
         </div>
         <div class="col col--3">
@@ -36,8 +37,9 @@
       </div>
       <ul class="col col--10">
         {% for item in site.data.core-nav.footer.secret-escapes %}
-        <li><a href="{{item.link}}">{{item.text}}</a></li>
-        {% unless forloop.last %}&#32;{% endunless %} {% endfor %}
+          <li><a href="{{item.link}}">{{item.text}}</a></li>
+          {% unless forloop.last %}&#32;{% endunless %} <!-- keeps normal space on html minify -->
+        {% endfor %}
       </ul>
     </div>
     <hr />
@@ -47,13 +49,16 @@
       </div>
       <ul class="col col--10">
         {% for item in site.data.core-nav.footer.collections %}
-        <li><a href="{{item.link}}">{{item.text}}</a></li>
-        {% unless forloop.last %}&#32;{% endunless %} {% endfor %}
+          <li><a href="{{item.link}}">{{item.text}}</a></li>
+          {% unless forloop.last %}&#32;{% endunless %} <!-- keeps normal space on html minify -->
+        {% endfor %}
       </ul>
     </div>
     <div class="end-row">
       <div class="row row--6-6">
-        <div class="col">© Copyright 2021 Secret Escapes</div>
+        <div class="col">
+          © Copyright <span class="js-year">2021</span> Secret Escapes
+        </div>
         <div class="col">
           <ul class="social-icons">
             {% for item in site.data.core-nav.footer.social %}
