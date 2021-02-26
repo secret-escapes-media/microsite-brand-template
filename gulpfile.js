@@ -83,8 +83,16 @@ const buildJsMain = () =>
     .src([
       //  JS MAIN FILE BUILD
       // --------------------
+      // plugins
       "./node_modules/jquery/dist/jquery.min.js",
-      "./_assets/js/main.js"
+      // start custom js - wraps all code with on doc ready
+      "./_assets/js/_component/on-ready/start.js",
+      // components
+      "./_assets/js/_component/standard.js",
+      // custom js for project
+      "./_assets/js/main.js",
+      // end custom js - wraps all code with on doc ready
+      "./_assets/js/_component/on-ready/end.js"
     ])
     .pipe(concat("main.js"))
     .pipe(gulp.dest("./_site/_assets/js/"))
