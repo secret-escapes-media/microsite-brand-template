@@ -5,9 +5,13 @@ title: Overview
 nav: true
 nav-order: 1
 header-content: >
-  <h1 class="font-display text-white font-semibold leading-none" style="font-size: 5rem;">
-    {{site.title}}
-  </h1>
+  <div>
+    <h1 class="font-display text-white font-semibold leading-none" style="font-size: 5rem;">
+      {{site.title}}
+    </h1>
+    <div class="h-8"></div>
+    <a href="#map" class="js-open-map btn">Explore the map</a>
+  </div>
 ---
 
 <div class="content-padding content-spacing">
