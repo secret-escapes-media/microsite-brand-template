@@ -174,6 +174,7 @@ const compressCss = () =>
     .pipe(
       purgecss({
         content: ["./_site/**/*.{html,js}"],
+        safelist: { standard: [/^mapboxgl/] },
         defaultExtractor: (content) => {
           const broadMatches = content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || [];
           const innerMatches =
