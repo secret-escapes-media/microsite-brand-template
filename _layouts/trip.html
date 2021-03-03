@@ -4,122 +4,33 @@ layout: standard
 
 <div class="content-padding content-spacing">
   <div class="mx-auto max-w-screen-lg text-center">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ab, nemo
-      quas provident blanditiis amet quo? Similique, ullam recusandae voluptate
-      minus eius sed fugiat iste quia ipsum et? Harum blanditiis iusto corrupti
-      nam, quia repellat amet id fugiat laboriosam accusantium nesciunt optio,
-      dolorem quo veritatis culpa cumque. Corrupti vero nesciunt dolores quo a,
-      voluptatibus magnam animi vel perferendis illo aspernatur doloremque natus
-      commodi, quis ab asperiores, maiores pariatur nostrum. Expedita debitis
-      ullam iure unde, iste eum cupiditate error dolorum voluptas!
-    </p>
+    <p>{{page.introduction}}</p>
   </div>
 </div>
-<div class="content-border content-spacing">
+<div class="content-border">
   <div class="row row--gutter-0">
     <div class="col col--8">
-      <div class="content-padding">
-        <h2 class="font-serif font-bold text-4xl">
-          Lorem ipsum dolor sit amet
-        </h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-          nesciunt recusandae at, maxime, maiores nulla aut distinctio, aliquid
-          doloremque veniam pariatur eveniet rem atque consectetur in eaque
-          illum dolor. Quasi? Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Earum nesciunt recusandae at, maxime, maiores nulla aut
-          distinctio, aliquid doloremque veniam pariatur eveniet rem atque
-          consectetur in eaque illum dolor. Quasi?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-          nesciunt recusandae at, maxime, maiores nulla aut distinctio, aliquid
-          doloremque veniam pariatur eveniet rem atque consectetur in eaque
-          illum dolor.
-        </p>
-        <div>
-          <h3 class="flex items-center -m-4 pt-8 pb-2">
-            <span
-              class="flex items-center justify-center rounded-full h-8 w-8 bg-primary-400 text-white text-center font-bold font-serif text-xl m-4 flex-shrink-0"
-              >1</span
-            >
-            <span class="font-serif font-bold text-2xl"
-              >Lorem ipsum dolor sit amet</span
-            >
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-            nesciunt recusandae at, maxime, maiores nulla aut distinctio,
-            aliquid doloremque veniam pariatur eveniet rem atque consectetur in
-            eaque illum dolor. Quasi? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Earum nesciunt recusandae at, maxime, maiores
-            nulla aut distinctio, aliquid doloremque veniam pariatur eveniet rem
-            atque consectetur in eaque illum dolor. Quasi?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-            nesciunt recusandae at, maxime, maiores nulla aut distinctio,
-            aliquid doloremque veniam pariatur eveniet rem atque consectetur in
-            eaque illum dolor.
-          </p>
-        </div>
-        <div>
-          <h3 class="flex items-center -m-4 pt-8 pb-2">
-            <span
-              class="flex items-center justify-center rounded-full h-8 w-8 bg-primary-400 text-white text-center font-bold font-serif text-xl m-4 flex-shrink-0"
-              >2</span
-            >
-            <span class="font-serif font-bold text-2xl"
-              >Lorem ipsum dolor sit amet</span
-            >
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-            nesciunt recusandae at, maxime, maiores nulla aut distinctio,
-            aliquid doloremque veniam pariatur eveniet rem atque consectetur in
-            eaque illum dolor. Quasi? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Earum nesciunt recusandae at, maxime, maiores
-            nulla aut distinctio, aliquid doloremque veniam pariatur eveniet rem
-            atque consectetur in eaque illum dolor. Quasi?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-            nesciunt recusandae at, maxime, maiores nulla aut distinctio,
-            aliquid doloremque veniam pariatur eveniet rem atque consectetur in
-            eaque illum dolor.
-          </p>
-        </div>
-        <div>
-          <h3 class="flex items-center -m-4 pt-8 pb-2">
-            <span
-              class="flex items-center justify-center rounded-full h-8 w-8 bg-primary-400 text-white text-center font-bold font-serif text-xl m-4 flex-shrink-0"
-              >3</span
-            >
-            <span class="font-serif font-bold text-2xl"
-              >Lorem ipsum dolor sit amet</span
-            >
-          </h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-            nesciunt recusandae at, maxime, maiores nulla aut distinctio,
-            aliquid doloremque veniam pariatur eveniet rem atque consectetur in
-            eaque illum dolor. Quasi? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Earum nesciunt recusandae at, maxime, maiores
-            nulla aut distinctio, aliquid doloremque veniam pariatur eveniet rem
-            atque consectetur in eaque illum dolor. Quasi?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-            nesciunt recusandae at, maxime, maiores nulla aut distinctio,
-            aliquid doloremque veniam pariatur eveniet rem atque consectetur in
-            eaque illum dolor.
-          </p>
-        </div>
+      <div class="content-padding content-spacing">
+        {% for stop in page.stops %}
+          <div>
+            <h3 class="flex items-center -m-4 pt-8 pb-2">
+              <span
+                class="flex items-center justify-center rounded-full h-8 w-8
+                bg-primary-400 text-white text-center font-bold font-serif
+                text-xl m-4 flex-shrink-0">
+                {{forloop.index}}
+              </span>
+              <span class="h5">
+                {{stop.title}}
+              </span>
+            </h3>
+            <p>{{stop.description}}</p>
+          </div>
+        {% endfor %}
       </div>
     </div>
     <div class="col col--4">
-      <div class="bg-black h-screen"></div>
+      <div id="map" data-trip-id="{{page.id}}" class="bg-black h-screen"></div>
     </div>
   </div>
 </div>
@@ -129,9 +40,13 @@ layout: standard
     <div class="h-6"></div>
   </div>
   <div class="row row--3-3-3-3 row--gutter-sm">
-    {% assign trip-pages = site.html_pages | where: 'layout', 'trip' | sort:
-    'trip-order' %} {% for trip in trip-pages %} {% unless page.id == trip.id %}
-    <div class="col">{% include content/road-trip.html data="trip" %}</div>
-    {% endunless %} {% endfor %}
+    {% assign trip-pages = site.html_pages | where: 'layout', 'trip' | sort: 'order' %}
+    {% for trip in trip-pages %}
+      {% unless page.id == trip.id %}
+        <div class="col">
+          {% include content/road-trip.html data="trip" %}
+        </div>
+      {% endunless %}
+    {% endfor %}
   </div>
 </div>

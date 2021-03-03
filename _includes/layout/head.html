@@ -44,6 +44,23 @@
     href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@600&display=swap"
     rel="stylesheet"
   />
+  {% if page.id == "overview" or page.layout == "trip" %}
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.13.0/mapbox-gl.js"></script>
+  {% endif %}
   <link rel="stylesheet" href="{{site.css}}/main.css" />
   <script src="{{site.js}}/main.js"></script>
+  {% if page.id == "overview" %}
+    <script>
+      // load in all trip content into js for map to use
+      {% assign trip-content = site.html_pages | where: 'layout', 'trip' | sort: 'order' %}
+      var tripContent = {{trip-content | jsonify}};
+      var baseurl = "{{site.baseurl}}";
+      var imgPath = "{{site.img}}";
+    </script>
+    <script src="{{site.js}}/overview.js"></script>
+  {% endif %}
+  {% if page.layout == "trip" %}
+    <script src="{{site.js}}/trip.js"></script>
+  {% endif %}
 </head>

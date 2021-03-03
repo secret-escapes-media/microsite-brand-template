@@ -2,6 +2,7 @@
 layout: standard
 id: road-trips
 title: Road trips
+permalink: /road-trips/
 nav: true
 nav-order: 2
 ---
@@ -13,7 +14,7 @@ nav-order: 2
 </div>
 <div class="content-padding content-padding--sm content-border">
   <div class="row row--4-4-4 row--gutter-sm">
-  {% assign trip-pages = site.html_pages | where: 'layout', 'trip' | sort: 'trip-order' %}
+  {% assign trip-pages = site.html_pages | where: 'layout', 'trip' | sort: 'order' %}
   {% for trip in trip-pages %}
     <div class="col">
       {% include content/road-trip.html data="trip" %}

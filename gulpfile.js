@@ -98,12 +98,38 @@ const buildJsMain = () =>
     .pipe(gulp.dest("./_site/_assets/js/"))
     .pipe(browserSync.reload({ stream: true }));
 
-// build for additional js files
-const buildJs = () =>
+// build for js file on overview page
+const buildJsOverview = () =>
   gulp
-    .src(["./_assets/js/*.js", "!./_assets/js/main.js"])
+    .src([
+      "./_assets/js/_component/on-ready/start.js",
+      "./_assets/js/map-data/trip/*.js",
+      "./_assets/js/page/overview.js",
+      "./_assets/js/_component/on-ready/end.js"
+    ])
+    .pipe(concat("overview.js"))
     .pipe(gulp.dest("./_site/_assets/js/"))
     .pipe(browserSync.reload({ stream: true }));
+
+// build for js file on each road trip page
+const buildJsTrip = () =>
+  gulp
+    .src([
+      "./_assets/js/_component/on-ready/start.js",
+      "./_assets/js/map-data/trip/*.js",
+      "./_assets/js/page/trip.js",
+      "./_assets/js/_component/on-ready/end.js"
+    ])
+    .pipe(concat("trip.js"))
+    .pipe(gulp.dest("./_site/_assets/js/"))
+    .pipe(browserSync.reload({ stream: true }));
+
+// // build for additional js files
+// const buildJs = () =>
+//   gulp
+//     .src(["./_assets/js/*.js", "!./_assets/js/main.js"])
+//     .pipe(gulp.dest("./_site/_assets/js/"))
+//     .pipe(browserSync.reload({ stream: true }));
 
 /////////////////////////////////////////////////////////////////////////  watch
 
@@ -111,7 +137,10 @@ const buildJs = () =>
 const watchFiles = () => {
   gulp.watch(["./_assets/css/**/*.css", "./tailwind.config.js"], buildCss);
   gulp.watch("./_assets/font/**/*.*", buildFonts);
-  gulp.watch("./_assets/js/**/*.js", gulp.parallel(buildJsMain, buildJs));
+  gulp.watch(
+    "./_assets/js/**/*.js",
+    gulp.parallel(buildJsMain, buildJsOverview, buildJsTrip)
+  );
   gulp
     .watch("./_assets/img/**/*.*", buildImages)
     // updates the compiled folder if an image is deleted
@@ -204,7 +233,8 @@ const build = gulp.series(
     buildFonts,
     buildImages,
     buildJsMain,
-    buildJs
+    buildJsOverview,
+    buildJsTrip
   )
 );
 const compress = gulp.parallel(
