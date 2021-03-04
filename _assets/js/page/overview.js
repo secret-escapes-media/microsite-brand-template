@@ -115,6 +115,8 @@ function map() {
         var thisTripId = e.features[0].layer.metadata.tripId;
         var poiContent = getPoi(thisTripId, poiId);
         var tripLink = baseurl + getTrip(thisTripId).url;
+        var poiDescriptionLimited =
+          poiContent.description.substring(0, 155) + "...";
         var description =
           '<div class="bg-black bg-ratio bg-ratio--3-2" style="background-image:url(\'' +
           imgPath +
@@ -125,7 +127,7 @@ function map() {
           '" class="absolute top-0 left-0 right-0 bottom-0"></a></div><div class="p-6"><h3 class="h5">' +
           poiContent.title +
           '</h3><p class="text-sm leading-loose pt-1">' +
-          poiContent.description +
+          poiDescriptionLimited +
           ' <a href="' +
           tripLink +
           '" class="text-primary-400 underline">Read More</a></p><div class="h-3"></div><a href="' +

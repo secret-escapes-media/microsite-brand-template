@@ -1,5 +1,11 @@
 ---
 layout: standard
+header-content: >
+  <div>
+    <h1 class="font-display text-white text-6xl font-semibold leading-tight">
+      {{page.title}} <span class="block max-w-screen-xl text-3xl">{{page.sub-title}}</span>
+    </h1>
+  </div>
 ---
 
 <div class="content-padding content-spacing">
@@ -24,7 +30,9 @@ layout: standard
                 {{stop.title}}
               </span>
             </h3>
-            <p>{{stop.description}}</p>
+            {% for paragraph in stop.description %}
+              <p>{{paragraph}}</p>
+            {% endfor %}
           </div>
         {% endfor %}
         <div class="pt-8">
