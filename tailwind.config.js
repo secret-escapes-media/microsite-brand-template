@@ -153,6 +153,14 @@ module.exports = {
         normal: "1.25",
         relaxed: "1.33",
         loose: "1.5"
+      },
+      animation: {
+        pulse: "pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite"
+      },
+      keyframes: {
+        pulse: {
+          "50%": { opacity: ".2" }
+        }
       }
     }
   },

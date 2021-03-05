@@ -3,6 +3,9 @@
   .link {
     @apply absolute top-0 left-0 right-0 bottom-0;
   }
+  .image {
+    @apply bg-grey-100;
+  }
   .content {
     @apply p-4;
   }
@@ -32,8 +35,35 @@
     .tag {
       @apply inline-flex items-center bg-black text-white m-1 px-2 py-1 rounded-sm leading-tight uppercase font-bold text-sm tracking-wider;
       img {
-        @apply mr-1;
+        @apply mr-1 w-3 h-3;
       }
     }
+  }
+  /****************************************************** empty loading state */
+  &.is-loading {
+    > * {
+      @apply animate-pulse;
+    }
+    .link {
+      @apply hidden;
+    }
+    .location {
+      @apply h-4 w-1/2 bg-grey-100;
+    }
+    .title {
+      @apply h-10 bg-grey-100 mt-2;
+    }
+    .bottom {
+      @apply mt-11;
+    }
+    .price {
+      @apply h-12 w-28 bg-grey-100;
+    }
+    .saving {
+      @apply h-12 w-16 border-grey-100 bg-grey-100;
+    }
+  }
+  .no-js &.is-loading > * {
+    @apply animate-none;
   }
 }
