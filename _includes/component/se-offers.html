@@ -2,7 +2,8 @@
 {% if include.amount %}
   {% assign amount = include.amount %}
 {% else %}
-  {% assign amount = 8 %}
+  {% assign all-offers = true %}
+  {% assign amount = 12 %}
 {% endif %}
 
 <!-- optional sort value - with default -->
@@ -13,7 +14,12 @@
 {% endif %}
 
 <!-- element to request offers & hold data for js -->
-<div class="js-se-offers" data-sheet="{{include.sheet}}" data-amount="{{amount}}" data-sort="{{offer-sort}}"></div>
+<div
+  class="js-se-offers"
+  data-sheet="{{include.sheet}}"
+  {% unless all-offers %}data-amount="{{amount}}"{% endunless %}
+  data-sort="{{offer-sort}}"
+></div>
 
 <!-- create placeholder offer cards based on amount value -->
 {% for counter in (1..amount) %}

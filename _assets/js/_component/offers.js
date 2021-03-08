@@ -79,7 +79,7 @@ $(".js-se-offers").each(function () {
   var el = $(this);
   var container = el.parent();
   var sheetName = el.data("sheet");
-  var amount = el.data("amount") || 8;
+  var amount = el.data("amount") || "all";
   var sort = el.data("sort") || "price-low";
   var url =
     "https://sheets.googleapis.com/v4/spreadsheets/" +
@@ -110,8 +110,15 @@ $(".js-se-offers").each(function () {
     // remove placeholder loading offer cards
     container.empty();
 
+    // either show all offers or specified amount
+    if (amount === "all") {
+      var offerLoopAmount = cellValues.length;
+    } else {
+      var offerLoopAmount = amount;
+    }
+
     // add offer cards with content
-    for (var i = 0; i < amount; i++) {
+    for (var i = 0; i < offerLoopAmount; i++) {
       // checks if there are less offers than amount
       if (cellValues[i] !== undefined) {
         // create array of used tags, loop through each type
