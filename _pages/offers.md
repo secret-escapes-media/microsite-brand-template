@@ -5,12 +5,6 @@ title: Offers
 permalink: /offers/
 nav: true
 nav-order: 5
-
-offers:
-  - id: asdf
-  - id: zxcv
-  - id: rewq
-  - id: tyui
 ---
 
 <div class="content-spacing">
@@ -21,7 +15,7 @@ offers:
     <div class="mt-12"></div>
     <div class="mx-auto max-w-screen-xl">
       <div class="row row--6-6 row--gutter-sm">
-        {% include component/se-offers.html sheet="UK" %}
+        {% include component/se-offers.html sheet="UK" amount="6" %}
       </div>
       <div class="text-center mt-10">
         <a href="{{site.data.core-nav.header[0].link}}" class="btn">See All Offers</a>

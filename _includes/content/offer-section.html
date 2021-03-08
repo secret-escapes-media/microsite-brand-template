@@ -1,5 +1,3 @@
-{% assign offers = "#, #, #" | split: "," %}
-
 <div class="page-padding">
   <div class="xl:pt-20">
     <div class="mx-auto max-w-screen-3xl">
@@ -8,11 +6,7 @@
       </h2>
       <div class="h-8"></div>
       <div class="row row--4-4-4 row--gutter-sm">
-        {% for offer in offers %}
-        <div class="col">
-          {% include component/offer-card.html offer="offer" %}
-        </div>
-        {% endfor %}
+        {% include component/se-offers.html sheet="UK" amount="3" %}
       </div>
       <div class="h-10"></div>
       <div class="text-center">
