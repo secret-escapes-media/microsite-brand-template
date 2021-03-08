@@ -1,0 +1,43 @@
+<!-- optional amount value - with default -->
+{% if include.amount %}
+  {% assign amount = include.amount %}
+{% else %}
+  {% assign all-offers = true %}
+  {% assign amount = 12 %}
+{% endif %}
+
+<!-- optional sort value - with default -->
+{% if include.sort %}
+  {% assign offer-sort = include.sort %}
+{% else %}
+  {% assign offer-sort = "price-low" %}
+{% endif %}
+
+<!-- element to request offers & hold data for js -->
+<div
+  class="js-se-offers"
+  data-sheet="{{include.sheet}}"
+  {% unless all-offers %}data-amount="{{amount}}"{% endunless %}
+  data-sort="{{offer-sort}}"
+></div>
+
+<!-- create placeholder offer cards based on amount value -->
+{% for counter in (1..amount) %}
+<div class="col">
+  <div class="offer-card is-loading">
+    <div class="image bg-ratio bg-ratio--3-2"></div>
+    <div class="content">
+      <div class="location"></div>
+      <div class="title"></div>
+      <div class="bottom">
+        <div class="left">
+          <div class="price"></div>
+        </div>
+        <div class="right">
+          <div class="saving"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}

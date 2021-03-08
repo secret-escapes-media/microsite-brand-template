@@ -50,17 +50,22 @@
   {% endif %}
   <link rel="stylesheet" href="{{site.css}}/main.css" />
   <script src="{{site.js}}/main.js"></script>
+  <script>
+    // load in jekyll data into js
+    var baseurl = "{{site.baseurl}}";
+    var imgPath = "{{site.img}}";
+  </script>
   {% if page.id == "overview" %}
     <script>
       // load in all trip content into js for map to use
       {% assign trip-content = site.html_pages | where: 'layout', 'trip' | sort: 'order' %}
       var tripContent = {{trip-content | jsonify}};
-      var baseurl = "{{site.baseurl}}";
-      var imgPath = "{{site.img}}";
     </script>
     <script src="{{site.js}}/overview.js"></script>
   {% endif %}
   {% if page.layout == "trip" %}
     <script src="{{site.js}}/trip.js"></script>
   {% endif %}
+</head>
+
 </head>

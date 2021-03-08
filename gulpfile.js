@@ -89,6 +89,7 @@ const buildJsMain = () =>
       "./_assets/js/_component/on-ready/start.js",
       // components
       "./_assets/js/_component/standard.js",
+      "./_assets/js/_component/offers.js",
       // custom js for project
       "./_assets/js/main.js",
       // end custom js - wraps all code with on doc ready
