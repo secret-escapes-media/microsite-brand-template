@@ -85,6 +85,7 @@ const buildJsMain = () =>
       // --------------------
       // plugins
       "./node_modules/jquery/dist/jquery.min.js",
+      // "./node_modules/waypoints/lib/jquery.waypoints.min.js",
       // start custom js - wraps all code with on doc ready
       "./_assets/js/_component/on-ready/start.js",
       // components
