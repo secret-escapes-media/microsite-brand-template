@@ -115,8 +115,14 @@ function map() {
         var thisTripId = e.features[0].layer.metadata.tripId;
         var poiContent = getPoi(thisTripId, poiId);
         var tripLink = baseurl + getTrip(thisTripId).url;
-        var poiDescriptionLimited =
-          poiContent.description.substring(0, 155) + "...";
+        // take first paragraph of description if multiple
+        if (typeof poiContent.description === "object") {
+          var poiDescription = poiContent.description[0];
+        } else {
+          var poiDescription = poiContent.description;
+        }
+        // limit description character length
+        var poiDescriptionLimited = poiDescription.substring(0, 155) + "...";
         var description =
           '<div class="bg-black bg-ratio bg-ratio--3-2" style="background-image:url(\'' +
           imgPath +
@@ -130,6 +136,8 @@ function map() {
           poiDescriptionLimited +
           ' <a href="' +
           tripLink +
+          "#" +
+          poiId +
           '" class="text-primary-400 underline">Read More</a></p><div class="h-3"></div><a href="' +
           tripLink +
           '" class="btn btn--sm">See the full trip</a></div>';
@@ -142,6 +150,94 @@ function map() {
           .addTo(map);
       });
     }
+    /////////////////////////////////////////////////////////dd se offers to map
+    var spreadsheetID = "14g1IiRy-0A3yFke6WRhvB_AOn_bNVESIDasUVcc93PM"; // ID of Google Spreadsheet
+    var apiKey = "AIzaSyBww8fHIRizAYPWsYyNGcRvLvzTLvvKmkw"; // API key for accessing G Sheet
+    var sheetName = "UK - map";
+    $.ajax({
+      method: "GET",
+      url:
+        "https://sheets.googleapis.com/v4/spreadsheets/" +
+        spreadsheetID +
+        "/values/" +
+        sheetName +
+        "!A3:Z?&key=" +
+        apiKey
+    }).done(function (data) {
+      // create geojson object
+      var seOffersGeojson = {
+        type: "FeatureCollection",
+        features: []
+      };
+      // add map pin for each SE offer
+      for (var i = 0; i < data.values.length; i++) {
+        var offer = data.values[i];
+        seOffersGeojson.features.push({
+          type: "Feature",
+          properties: {
+            id: offer[0],
+            title: offer[1],
+            location: offer[2],
+            price: offer[3],
+            priceDescription: offer[4],
+            saving: offer[5],
+            image: offer[7],
+            link: offer[6]
+          },
+          geometry: {
+            type: "Point",
+            coordinates: [offer[10], offer[9]]
+          }
+        });
+      }
+      // add se offer layer to map, below POIs & only at certain zoom level
+      map.addLayer(
+        {
+          id: "se-offers",
+          type: "symbol",
+          source: {
+            type: "geojson",
+            data: seOffersGeojson
+          },
+          layout: {
+            "icon-image": "pin-se",
+            "icon-size": 0.7,
+            "icon-anchor": "bottom",
+            "icon-allow-overlap": true
+          },
+          minzoom: 8
+        },
+        "country-label"
+      );
+      ///////////////////////////////////////////////////////// offer card popup
+      map.on("click", "se-offers", function (e) {
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var offer = e.features[0].properties;
+        var description =
+          '<div class="offer-card"><div class="image bg-ratio bg-ratio--3-2" style="background-image: url(\'' +
+          offer.image +
+          '\')" ></div><div class="content"><div class="location">' +
+          offer.location +
+          '</div><div class="title">' +
+          offer.title +
+          '</div><div class="bottom"><div class="left"><div class="price"><div>From <span>£' +
+          offer.price +
+          "</span></div><div>" +
+          offer.priceDescription +
+          '</div></div></div><div class="right"><div class="saving">Up to <span>-' +
+          offer.saving +
+          '%</span></div></div></div></div><a class="link" href="' +
+          offer.link +
+          '"></a></div>';
+        new mapboxgl.Popup({
+          focusAfterOpen: false
+        })
+          .setLngLat(coordinates)
+          .setHTML(description)
+          .setMaxWidth("360px")
+          .addTo(map);
+      });
+    });
   });
 }
 
