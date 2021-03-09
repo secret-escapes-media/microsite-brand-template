@@ -22,7 +22,8 @@
     "postcss-rgb": "^1.0.0",
     "postcss-sassy-mixins": "^2.1.0",
     "postcss-simple-vars": "^6.0.3",
-    "tailwindcss": "^2.0.3"
+    "tailwindcss": "^2.0.3",
+    "waypoints": "^4.0.1"
   },
   "browserslist": [
     "last 3 versions",
