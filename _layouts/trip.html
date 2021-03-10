@@ -11,6 +11,12 @@ header-content: >
 <div class="content-padding content-spacing">
   <div class="mx-auto max-w-screen-lg text-center">
     <p>{{page.introduction}}</p>
+    <ul class="flex flex-wrap justify-center -mt-4 -ml-4 py-4">
+      {% for item in page.tags %}
+        {% assign tag = site.data.tags | where: "id", item | first %}
+        <li class="block mt-4 ml-4 border border-primary-400 rounded text-primary-400 py-2 px-3 leading-none">{{tag.text}}</li>
+      {% endfor %}
+    </ul>
   </div>
 </div>
 <div class="content-border">
