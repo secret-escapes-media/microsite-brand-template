@@ -117,8 +117,11 @@ const buildJsOverview = () =>
 const buildJsTrip = () =>
   gulp
     .src([
+      "./node_modules/scrollmagic/scrollmagic/minified/ScrollMagic.min.js",
+      // "./node_modules/scrollmagic/scrollmagic/minified/plugins/debug.addIndicators.min.js",
       "./_assets/js/_component/on-ready/start.js",
       "./_assets/js/map-data/trip/*.js",
+      "./_assets/js/_component/debounce.js",
       "./_assets/js/page/trip.js",
       "./_assets/js/_component/on-ready/end.js"
     ])

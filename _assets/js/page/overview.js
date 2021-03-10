@@ -130,6 +130,8 @@ function map() {
           thisTripId +
           '/bg.jpg\')"><a href="' +
           tripLink +
+          "#" +
+          poiId +
           '" class="absolute top-0 left-0 right-0 bottom-0"></a></div><div class="p-6"><h3 class="h5">' +
           poiContent.title +
           '</h3><p class="text-sm leading-loose pt-1">' +
