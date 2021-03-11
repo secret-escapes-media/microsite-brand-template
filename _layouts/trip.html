@@ -25,7 +25,7 @@ header-content: >
       <div class="content-padding content-spacing">
         {% for stop in page.stops %}
           <div id="{{stop.id}}" class="js-trip-stop{% unless forloop.last %} pb-12{% endunless %}">
-            <div class="bg-textBlack bg-ratio bg-ratio--3-2 bg-center bg-cover bg-no-repeat" style="background-image: url('{{site.img}}/img.jpg')"></div>
+            <div class="bg-textBlack bg-ratio bg-ratio--3-2 bg-center bg-cover bg-no-repeat" style="background-image: url('{{site.img}}/content/{{page.id}}/{{stop.id}}.jpg')"></div>
             <h3 class="flex items-center -m-4 pt-6 pb-2">
               <span
                 class="flex items-center justify-center rounded-full h-8 w-8 text-white text-center font-bold font-serif text-xl m-4 flex-shrink-0 {% if stop.type == "hotel" %}bg-textBlack{% else %}bg-primary-400{% endif %}">

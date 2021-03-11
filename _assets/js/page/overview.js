@@ -128,7 +128,9 @@ function map() {
           imgPath +
           "/content/" +
           thisTripId +
-          '/bg.jpg\')"><a href="' +
+          "/" +
+          poiId +
+          '.jpg\')"><a href="' +
           tripLink +
           "#" +
           poiId +
