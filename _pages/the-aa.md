@@ -5,6 +5,7 @@ title: Love that feeling?
 permalink: /the-aa/
 nav: true
 nav-order: 4
+header-image: bg.png
 header-content: >
   <div class="text-white">
     <h1 class="font-display text-6xl font-semibold leading-snug">

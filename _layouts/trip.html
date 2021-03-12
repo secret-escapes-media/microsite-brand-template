@@ -55,7 +55,7 @@ header-content: >
     <h2 class="font-serif font-bold text-3xl">Choose another trip</h2>
     <div class="h-6"></div>
   </div>
-  <div class="row row--3-3-3-3 row--gutter-sm">
+  <div class="row row--4-4-4 row--gutter-sm">
     {% assign trip-pages = site.html_pages | where: 'layout', 'trip' | sort: 'order' %}
     {% for trip in trip-pages %}
       {% unless page.id == trip.id %}

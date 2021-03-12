@@ -6,7 +6,7 @@ layout: default
 <div class="page">
   <div
     class="page-bg"
-    style="background-image: url('{{site.img}}/content/{{page.id}}/bg.jpg')"
+    style="background-image: url('{{site.img}}/content/{{page.id}}/{% if page.header-image %}{{page.header-image}}{% else %}bg.jpg{% endif %}')"
   ></div>
   <main class="page-content">
     <!-- page header -->
