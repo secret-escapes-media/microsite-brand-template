@@ -6,8 +6,8 @@ nav: true
 nav-order: 1
 header-content: >
   <div class="max-w-screen-xl">
-    <h1 class="font-sans font-black italic tracking-wider uppercase text-white leading-none" style="font-size: 5rem;">
-      {{site.title}}
+    <h1 class="font-serif font-bold text-white leading-none" style="font-size: 5rem;">
+      Feel the freedom <br>of the road
     </h1>
     <div class="flex flex-wrap justify-center items-center text-white ">
       <span class="block m-2 text-2xl font-semibold">Road trips in partnership with the AA</span>
