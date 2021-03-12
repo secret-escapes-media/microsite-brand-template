@@ -1,16 +1,16 @@
 ---
 layout: standard
 header-content: >
-  <div>
-    <h1 class="text-white text-center leading-tight">
-      <span class="block max-w-screen-2xl mx-auto font-sans font-black italic tracking-widest uppercase text-7xl">{{page.title}}</span> <span class="block max-w-screen-lg mx-auto normal-case tracking-normal font-normal not-italic text-2xl">{{page.sub-title}}</span>
+  <div class="max-w-screen-xl mx-auto">
+    <h1 class="font-sans font-black italic tracking-widest uppercase text-7xl text-white text-center leading-none">
+      {{page.title}}
     </h1>
   </div>
 ---
 
 <div class="content-padding content-spacing">
   <div class="mx-auto max-w-screen-lg text-center">
-    <p>{{page.introduction}}</p>
+    <p>{{page.intro}}</p>
     <ul class="flex flex-wrap justify-center -mt-4 -ml-4 py-4">
       {% for item in page.tags %}
         {% assign tag = site.data.tags | where: "id", item | first %}

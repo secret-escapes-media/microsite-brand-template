@@ -11,7 +11,7 @@
   </div>
   <div class="p-5">
     <h2 class="h5">{{trip.title}}</h2>
-    <p class="leading-tight mt-1 mb-3">{{trip.sub-title}}</p>
+    <p class="leading-tight mt-1 mb-3">{{trip.intro | truncatewords: 16}}</p>
     <div class="flex mt-3 items-center justify-between">
       <a class="btn btn--sm" href="{{site.baseurl}}{{trip.url}}">View Trip</a>
       <ul class="flex flex-wrap -mt-2 -ml-2">
