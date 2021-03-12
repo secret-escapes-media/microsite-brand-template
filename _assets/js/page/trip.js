@@ -11,7 +11,7 @@ mapboxgl.accessToken =
   "pk.eyJ1IjoiaGFtaXNoamdyYXkiLCJhIjoiY2pkbjBmeGN6MDd1YzMzbXI3cWdpNThjayJ9.3YE8T1H2QUyqNIkxdKWxkg";
 var tripMap = new mapboxgl.Map({
   container: "map",
-  style: "mapbox://styles/hamishjgray/cjmkjea7r1apf2rrsneiy7sxa",
+  style: "mapbox://styles/hamishjgray/ckm4wxqbda6k617qo3vedd0eg",
   logoPosition: "bottom-right",
   zoom: 4.5,
   minZoom: 4.5, // stops zooming out too far
@@ -43,8 +43,12 @@ function makeMap(map) {
           }
         },
         paint: {
-          "line-width": 1.33,
-          "line-color": "#27509b"
+          "line-width": 2,
+          "line-color": "#575a6b"
+        },
+        layout: {
+          "line-cap": "round",
+          "line-join": "round"
         }
       },
       "road-label"
@@ -79,7 +83,7 @@ function makeMap(map) {
         "circle-radius": 4,
         "circle-color": "#ffffff",
         "circle-stroke-width": 2,
-        "circle-stroke-color": "#27509b"
+        "circle-stroke-color": "#575a6b"
       }
     });
     //////////////////////////////////////////////////////////// add POI markers
@@ -91,8 +95,8 @@ function makeMap(map) {
         data: currentTrip.pois
       },
       layout: {
-        "icon-image": "pin-michelin-star",
-        "icon-size": 0.7,
+        "icon-image": "pin-aa",
+        "icon-size": 1,
         "icon-anchor": "bottom",
         "icon-allow-overlap": true
       }

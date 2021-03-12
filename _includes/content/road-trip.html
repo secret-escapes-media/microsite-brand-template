@@ -11,15 +11,15 @@
   </div>
   <div class="p-5">
     <h2 class="h5">{{trip.title}}</h2>
-    <p class="leading-tight mt-1 mb-3">{{trip.intro | truncatewords: 16}}</p>
-    <div class="flex mt-3 items-center justify-between">
-      <a class="btn btn--sm" href="{{site.baseurl}}{{trip.url}}">View Trip</a>
-      <ul class="flex flex-wrap -mt-2 -ml-2">
-        {% for item in trip.tags %}
-          {% assign tag = site.data.tags | where: "id", item | first %}
-          <li class="text-sm block mt-2 ml-2 border border-primary-400 rounded text-primary-400 py-1 px-2 leading-none">{{tag.text}}</li>
-        {% endfor %}
-      </ul>
+    <p class="leading-normal mt-1 mb-3">{{trip.intro | truncatewords: 16}}</p>
+    <ul class="flex flex-wrap justify-start -mt-2 -ml-2">
+      {% for item in trip.tags %}
+        {% assign tag = site.data.tags | where: "id", item | first %}
+        <li class="text-sm block mt-2 ml-2 border border-primary-400 rounded text-primary-400 py-1 px-2 leading-none">{{tag.text}}</li>
+      {% endfor %}
+    </ul>
+    <div class="flex mt-3 items-start">
+      <a class="btn btn--sm flex-shrink-0" href="{{site.baseurl}}{{trip.url}}">View Trip</a>
     </div>
   </div>
 </div>

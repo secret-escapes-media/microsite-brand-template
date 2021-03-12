@@ -5,11 +5,12 @@ title: Road trips
 permalink: /road-trips/
 nav: true
 nav-order: 2
+intro: Find your next adventure here. From adventures through soaring mountains and wild coastlines, to iconic country drives and pretty villages, discover lesser-known road trips that are set to inspire your wanderlust.
 ---
 
 <div class="content-padding content-spacing">
   <div class="mx-auto max-w-screen-lg text-center">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nesciunt recusandae at, maxime, maiores nulla aut distinctio, aliquid doloremque veniam pariatur eveniet rem atque consectetur in eaque illum dolor. Quasi?</p>
+    <p>{{page.intro}}</p>
   </div>
 </div>
 <div class="content-padding content-padding--sm content-border">

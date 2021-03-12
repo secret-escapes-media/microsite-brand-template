@@ -1,12 +1,16 @@
-- id: calm
-  text: Calm
-- id: freedom
-  text: Freedom
-- id: fun
-  text: Fun
-- id: connection
-  text: Connection
 - id: adventure
   text: Adventure
 - id: awe
   text: Awe
+- id: calm
+  text: Calm
+- id: daring
+  text: Daring
+- id: escape
+  text: Escape
+- id: freedom
+  text: Freedom
+- id: fun
+  text: Fun
+- id: romance
+  text: Romance

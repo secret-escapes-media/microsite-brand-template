@@ -16,6 +16,10 @@
     background: 0;
     @apply bg-partner text-textBlack;
   }
+  &&--partner-white {
+    background: 0;
+    @apply bg-white text-textBlack;
+  }
 }
 
 .btn-outline {

@@ -2,7 +2,7 @@
 layout: standard
 header-content: >
   <div class="max-w-screen-xl mx-auto">
-    <h1 class="font-sans font-black italic tracking-widest uppercase text-7xl text-white text-center leading-none">
+    <h1 class="font-sans font-black italic tracking-wider uppercase text-7xl text-white text-center leading-none">
       {{page.title}}
     </h1>
   </div>
@@ -11,7 +11,8 @@ header-content: >
 <div class="content-padding content-spacing">
   <div class="mx-auto max-w-screen-lg text-center">
     <p>{{page.intro}}</p>
-    <ul class="flex flex-wrap justify-center -mt-4 -ml-4 py-4">
+    <p class="pt-2">For that feeling of…</p>
+    <ul class="flex flex-wrap justify-center -mt-4 -ml-4 py-2">
       {% for item in page.tags %}
         {% assign tag = site.data.tags | where: "id", item | first %}
         <li class="block mt-4 ml-4 border border-primary-400 rounded text-primary-400 py-2 px-3 leading-none">{{tag.text}}</li>
@@ -28,7 +29,7 @@ header-content: >
             <div class="bg-textBlack bg-ratio bg-ratio--3-2 bg-center bg-cover bg-no-repeat" style="background-image: url('{{site.img}}/content/{{page.id}}/{{stop.id}}.jpg')"></div>
             <h3 class="flex items-center -m-4 pt-6 pb-2">
               <span
-                class="flex items-center justify-center rounded-full h-8 w-8 text-white text-center font-bold font-serif text-xl m-4 flex-shrink-0 {% if stop.type == "hotel" %}bg-textBlack{% else %}bg-primary-400{% endif %}">
+                class="flex items-center justify-center rounded-full h-8 w-8 text-center font-bold font-serif text-xl m-4 flex-shrink-0 {% if stop.type == "hotel" %}text-white bg-textBlack{% else %}text-textBlack bg-partner{% endif %}">
                 {{forloop.index}}
               </span>
               <span class="h5">
@@ -41,7 +42,7 @@ header-content: >
           </div>
         {% endfor %}
         <div class="pt-10">
-          <a href="{{page.se-link}}" class="btn">Book this break</a>
+          <a href="{{page.se-link}}" class="btn">Book this trip</a>
         </div>
       </div>
     </div>

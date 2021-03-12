@@ -1,16 +1,18 @@
 ---
 layout: standard
 id: offers
-title: Offers
+title: Book a trip
 permalink: /offers/
 nav: true
 nav-order: 5
+intro: Here they are - our handpicked selection of road-trip inspired offers. These multi-stop deals allow you the freedom to explore, with the comfort and style of our choice hotels to boot. Brought to you by the AA, find your next adventure here.
 ---
 
 <div class="content-spacing">
   <div class="content-padding--narrow">
     <div class="mx-auto max-w-screen-lg text-center">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, suscipit doloribus maiores accusantium quam odit cumque id nemo consequatur sint autem at fugiat voluptatem consequuntur beatae quidem tenetur harum eius ab, provident, est ipsa neque. Natus fugiat itaque quod dolores provident quisquam ab, nobis, illum beatae fuga accusantium. Quis optio incidunt esse debitis odio deleniti? Quia voluptates officiis omnis consequatur.</p>
+      <p>{{page.intro}}</p>
+      <p>If that wasn’t enough, we’re also offering a further £25 credit toward a future getaway when you book these offers!</p>
     </div>
     <div class="mt-12"></div>
     <div class="mx-auto max-w-screen-xl">

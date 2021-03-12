@@ -23,7 +23,7 @@ function map() {
     "pk.eyJ1IjoiaGFtaXNoamdyYXkiLCJhIjoiY2pkbjBmeGN6MDd1YzMzbXI3cWdpNThjayJ9.3YE8T1H2QUyqNIkxdKWxkg";
   var map = new mapboxgl.Map({
     container: "map",
-    style: "mapbox://styles/hamishjgray/cjmkjea7r1apf2rrsneiy7sxa",
+    style: "mapbox://styles/hamishjgray/ckm4wxqbda6k617qo3vedd0eg",
     logoPosition: "bottom-right",
     zoom: 5.64,
     minZoom: 4.5,
@@ -31,6 +31,16 @@ function map() {
   });
   map.dragRotate.disable(); // disable map rotation using right click + drag
   map.touchZoomRotate.disableRotation(); // disable map rotation using touch rotation gesture
+
+  // center the map on all road trip routes
+  var bounds = new mapboxgl.LngLatBounds();
+  for (let i = 0; i < allTrips.length; i++) {
+    for (let j = 0; j < allTrips[i].preroute.features.length; j++) {
+      var feature = allTrips[i].preroute.features[j];
+      bounds.extend(feature.geometry.coordinates);
+    }
+  }
+  map.fitBounds(bounds, { padding: 120 }); // inner margin for markers
 
   // builds map with custom functionality
   map.on("load", function () {
@@ -53,8 +63,12 @@ function map() {
             }
           },
           paint: {
-            "line-width": 1.33,
-            "line-color": "#27509b"
+            "line-width": 2,
+            "line-color": "#575a6b"
+          },
+          layout: {
+            "line-cap": "round",
+            "line-join": "round"
           }
         },
         "road-label"
@@ -89,7 +103,7 @@ function map() {
           "circle-radius": 4,
           "circle-color": "#ffffff",
           "circle-stroke-width": 2,
-          "circle-stroke-color": "#27509b"
+          "circle-stroke-color": "#575a6b"
         }
       });
       // add POI markers to map
@@ -102,8 +116,8 @@ function map() {
           data: allTrips[i].pois
         },
         layout: {
-          "icon-image": "pin-michelin-star",
-          "icon-size": 0.7,
+          "icon-image": "pin-aa",
+          "icon-size": 1,
           "icon-anchor": "bottom",
           "icon-allow-overlap": true
         }
@@ -146,7 +160,8 @@ function map() {
           tripLink +
           '" class="btn btn--sm">See the full trip</a></div>';
         new mapboxgl.Popup({
-          focusAfterOpen: false
+          focusAfterOpen: false,
+          anchor: "bottom"
         })
           .setLngLat(coordinates)
           .setHTML(description)
@@ -251,5 +266,5 @@ map();
 // reveal map
 $(".js-open-map").on("click", function (e) {
   e.preventDefault();
-  $(".js-map-cover").addClass("hidden");
+  $(".js-map-cover").fadeOut(500);
 });
