@@ -5,8 +5,8 @@ title: Overview
 nav: true
 nav-order: 1
 header-content: >
-  <div>
-    <h1 class="font-display text-white font-semibold leading-none" style="font-size: 5rem;">
+  <div class="max-w-screen-2xl">
+    <h1 class="font-sans font-black italic tracking-widest uppercase text-white leading-none" style="font-size: 6rem;">
       {{site.title}}
     </h1>
     <div class="h-8"></div>

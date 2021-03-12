@@ -106,7 +106,9 @@ module.exports = {
       "3xl": "2rem",
       "4xl": "2.5rem",
       "5xl": "3rem",
-      "6xl": "3.5rem"
+      "6xl": "3.5rem",
+      "7xl": "4rem",
+      "8xl": "5rem"
     },
     boxShadow: {
       b: "inset 1px 1px 1px rgba(0, 0, 0, 0.25)",

@@ -7,11 +7,11 @@ nav: true
 nav-order: 4
 header-image: bg.png
 header-content: >
-  <div class="text-white">
-    <h1 class="font-display text-6xl font-semibold leading-snug">
+  <div class="text-black">
+    <h1 class="font-sans font-black italic tracking-widest uppercase text-7xl leading-none">
       {{page.title}}
     </h1>
-    <p class="mt-2 font-display text-2xl font-semibold leading-snug">Watch our advert and see our furry four-legged star</p>
+    <p class="mt-2 font-sans font-bold italic tracking-wide text-3xl leading-snug">Watch our advert and see our furry four-legged star</p>
   </div>
 intro: Tukker loves nothing more than the feeling of being out on the open road with the sun on his face and the wind in his fur. If you love that feeling too and don’t want it to stop, join the AA. We’ll get you back on the road.
 ---
